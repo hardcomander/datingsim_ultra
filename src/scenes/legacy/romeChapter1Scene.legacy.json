@@ -1,0 +1,2285 @@
+{
+  "format": "graph-v1",
+  "id": "romeChapter1",
+  "npc": {
+    "id": "rome",
+    "name": "Rome Kline",
+    "type": "athlete",
+    "location": "Park bench, late afternoon",
+    "initialStats": {
+      "affinity": 0,
+      "trust": 0,
+      "attraction": 0,
+      "comfort": 0,
+      "respect": 0
+    },
+    "currentMood": "frustrated after practice"
+  },
+  "backdrop": "Cattails Park",
+  "background": "locations/park_bench.png",
+  "sceneContext": "Post-practice debrief with Rome. Your responses shape trust, attraction, and emotional tone.",
+  "startSceneId": "ROME_01_START",
+  "nodes": {
+    "ROME_01_START": {
+      "id": "ROME_01_START",
+      "npcDialogue": "Rome studies you for a second. About the three-goal practice collapse... I need the real version from you, not the polished one.",
+      "npcAction": "She leans back, then forward again like she cannot decide between defense and trust.",
+      "npcSubtext": "Hub 1/10. The conversation deepens around the three-goal practice collapse.",
+      "choices": [
+        {
+          "id": "ROME_01_START_A",
+          "display": "\"Youre not wrong about the three-goal practice collapse. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_START_BRANCH_A"
+        },
+        {
+          "id": "ROME_01_START_B",
+          "display": "\"Theres fire in how you talk about the three-goal practice collapse... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_01_START_BRANCH_B"
+        },
+        {
+          "id": "ROME_01_START_C",
+          "display": "\"I can respect your take on the three-goal practice collapse, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_START_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_01_START_BRANCH_A": {
+      "id": "ROME_01_START_BRANCH_A",
+      "npcDialogue": "Rome exhales slower this time, shoulders finally dropping. Okay. If were talking about the three-goal practice collapse, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 1.",
+      "choices": [
+        {
+          "id": "ROME_01_START_BRANCH_A_A",
+          "display": "\"You dont have to carry the three-goal practice collapse alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_A_B",
+          "display": "\"For the three-goal practice collapse, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_A_C",
+          "display": "\"On the three-goal practice collapse, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        }
+      ]
+    },
+    "ROME_01_START_BRANCH_B": {
+      "id": "ROME_01_START_BRANCH_B",
+      "npcDialogue": "She tilts her head, half amused and half cautious. Okay. If were talking about the three-goal practice collapse, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 1.",
+      "choices": [
+        {
+          "id": "ROME_01_START_BRANCH_B_A",
+          "display": "\"Youre intense about the three-goal practice collapse, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_B_B",
+          "display": "\"Tell me one truth about the three-goal practice collapse you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_B_C",
+          "display": "\"If we chase chemistry through the three-goal practice collapse, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        }
+      ]
+    },
+    "ROME_01_START_BRANCH_C": {
+      "id": "ROME_01_START_BRANCH_C",
+      "npcDialogue": "She plants her feet and watches you like this is a challenge round. Okay. If were talking about the three-goal practice collapse, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 1.",
+      "choices": [
+        {
+          "id": "ROME_01_START_BRANCH_C_A",
+          "display": "\"I can handle conflict around the three-goal practice collapse; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_C_B",
+          "display": "\"If the three-goal practice collapse keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_01_START_BRANCH_C_C",
+          "display": "\"On the three-goal practice collapse, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_SUPPORTED"
+        }
+      ]
+    },
+    "ROME_01_SUPPORTED": {
+      "id": "ROME_01_SUPPORTED",
+      "npcDialogue": "Rome studies you for a second. About the weight she feels carrying expectations... I need the real version from you, not the polished one.",
+      "npcAction": "She taps her fingers against her knee, waiting for your answer without looking away.",
+      "npcSubtext": "Hub 2/10. The conversation deepens around the weight she feels carrying expectations.",
+      "choices": [
+        {
+          "id": "ROME_01_SUPPORTED_A",
+          "display": "\"Youre not wrong about the weight she feels carrying expectations. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_SUPPORTED_BRANCH_A"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_B",
+          "display": "\"Theres fire in how you talk about the weight she feels carrying expectations... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_01_SUPPORTED_BRANCH_B"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_C",
+          "display": "\"I can respect your take on the weight she feels carrying expectations, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_SUPPORTED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_01_SUPPORTED_BRANCH_A": {
+      "id": "ROME_01_SUPPORTED_BRANCH_A",
+      "npcDialogue": "Rome exhales slower this time, shoulders finally dropping. Okay. If were talking about the weight she feels carrying expectations, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 2.",
+      "choices": [
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_A_A",
+          "display": "\"You dont have to carry the weight she feels carrying expectations alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_A_B",
+          "display": "\"For the weight she feels carrying expectations, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_A_C",
+          "display": "\"On the weight she feels carrying expectations, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        }
+      ]
+    },
+    "ROME_01_SUPPORTED_BRANCH_B": {
+      "id": "ROME_01_SUPPORTED_BRANCH_B",
+      "npcDialogue": "She tilts her head, half amused and half cautious. Okay. If were talking about the weight she feels carrying expectations, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 2.",
+      "choices": [
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_B_A",
+          "display": "\"Youre intense about the weight she feels carrying expectations, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_B_B",
+          "display": "\"Tell me one truth about the weight she feels carrying expectations you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through the weight she feels carrying expectations, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        }
+      ]
+    },
+    "ROME_01_SUPPORTED_BRANCH_C": {
+      "id": "ROME_01_SUPPORTED_BRANCH_C",
+      "npcDialogue": "She plants her feet and watches you like this is a challenge round. Okay. If were talking about the weight she feels carrying expectations, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 2.",
+      "choices": [
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_C_A",
+          "display": "\"I can handle conflict around the weight she feels carrying expectations; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_C_B",
+          "display": "\"If the weight she feels carrying expectations keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        },
+        {
+          "id": "ROME_01_SUPPORTED_BRANCH_C_C",
+          "display": "\"On the weight she feels carrying expectations, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_CHALLENGED"
+        }
+      ]
+    },
+    "ROME_01_CHALLENGED": {
+      "id": "ROME_01_CHALLENGED",
+      "npcDialogue": "Rome studies you for a second. About the line between standards and harshness... I need the real version from you, not the polished one.",
+      "npcAction": "She leans back, then forward again like she cannot decide between defense and trust.",
+      "npcSubtext": "Hub 3/10. The conversation deepens around the line between standards and harshness.",
+      "choices": [
+        {
+          "id": "ROME_01_CHALLENGED_A",
+          "display": "\"Youre not wrong about the line between standards and harshness. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_CHALLENGED_BRANCH_A"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_B",
+          "display": "\"Theres fire in how you talk about the line between standards and harshness... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_01_CHALLENGED_BRANCH_B"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_C",
+          "display": "\"I can respect your take on the line between standards and harshness, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_CHALLENGED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_01_CHALLENGED_BRANCH_A": {
+      "id": "ROME_01_CHALLENGED_BRANCH_A",
+      "npcDialogue": "Her voice softens and she shifts closer on the bench. Okay. If were talking about the line between standards and harshness, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 3.",
+      "choices": [
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_A_A",
+          "display": "\"You dont have to carry the line between standards and harshness alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_A_B",
+          "display": "\"For the line between standards and harshness, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_A_C",
+          "display": "\"On the line between standards and harshness, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        }
+      ]
+    },
+    "ROME_01_CHALLENGED_BRANCH_B": {
+      "id": "ROME_01_CHALLENGED_BRANCH_B",
+      "npcDialogue": "There is a charged pause before she answers, like she enjoys the risk. Okay. If were talking about the line between standards and harshness, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 3.",
+      "choices": [
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_B_A",
+          "display": "\"Youre intense about the line between standards and harshness, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_B_B",
+          "display": "\"Tell me one truth about the line between standards and harshness you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through the line between standards and harshness, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        }
+      ]
+    },
+    "ROME_01_CHALLENGED_BRANCH_C": {
+      "id": "ROME_01_CHALLENGED_BRANCH_C",
+      "npcDialogue": "Rome folds her arms, then forces herself to stay present. Okay. If were talking about the line between standards and harshness, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 3.",
+      "choices": [
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_C_A",
+          "display": "\"I can handle conflict around the line between standards and harshness; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_C_B",
+          "display": "\"If the line between standards and harshness keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        },
+        {
+          "id": "ROME_01_CHALLENGED_BRANCH_C_C",
+          "display": "\"On the line between standards and harshness, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_FLUSTERED"
+        }
+      ]
+    },
+    "ROME_01_FLUSTERED": {
+      "id": "ROME_01_FLUSTERED",
+      "npcDialogue": "Rome studies you for a second. About the spark between tension and attraction... I need the real version from you, not the polished one.",
+      "npcAction": "She taps her fingers against her knee, waiting for your answer without looking away.",
+      "npcSubtext": "Hub 4/10. The conversation deepens around the spark between tension and attraction.",
+      "choices": [
+        {
+          "id": "ROME_01_FLUSTERED_A",
+          "display": "\"Youre not wrong about the spark between tension and attraction. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_01_FLUSTERED_BRANCH_A"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_B",
+          "display": "\"Theres fire in how you talk about the spark between tension and attraction... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_01_FLUSTERED_BRANCH_B"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_C",
+          "display": "\"I can respect your take on the spark between tension and attraction, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_01_FLUSTERED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_01_FLUSTERED_BRANCH_A": {
+      "id": "ROME_01_FLUSTERED_BRANCH_A",
+      "npcDialogue": "Rome exhales slower this time, shoulders finally dropping. Okay. If were talking about the spark between tension and attraction, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 4.",
+      "choices": [
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_A_A",
+          "display": "\"You dont have to carry the spark between tension and attraction alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_A_B",
+          "display": "\"For the spark between tension and attraction, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_A_C",
+          "display": "\"On the spark between tension and attraction, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        }
+      ]
+    },
+    "ROME_01_FLUSTERED_BRANCH_B": {
+      "id": "ROME_01_FLUSTERED_BRANCH_B",
+      "npcDialogue": "She tilts her head, half amused and half cautious. Okay. If were talking about the spark between tension and attraction, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 4.",
+      "choices": [
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_B_A",
+          "display": "\"Youre intense about the spark between tension and attraction, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_B_B",
+          "display": "\"Tell me one truth about the spark between tension and attraction you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through the spark between tension and attraction, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        }
+      ]
+    },
+    "ROME_01_FLUSTERED_BRANCH_C": {
+      "id": "ROME_01_FLUSTERED_BRANCH_C",
+      "npcDialogue": "She plants her feet and watches you like this is a challenge round. Okay. If were talking about the spark between tension and attraction, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 4.",
+      "choices": [
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_C_A",
+          "display": "\"I can handle conflict around the spark between tension and attraction; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_C_B",
+          "display": "\"If the spark between tension and attraction keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        },
+        {
+          "id": "ROME_01_FLUSTERED_BRANCH_C_C",
+          "display": "\"On the spark between tension and attraction, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+        }
+      ]
+    },
+    "ROME_02_SUPPORTED_CONTINUED": {
+      "id": "ROME_02_SUPPORTED_CONTINUED",
+      "npcDialogue": "Rome studies you for a second. About what it means to feel genuinely understood... I need the real version from you, not the polished one.",
+      "npcAction": "She leans back, then forward again like she cannot decide between defense and trust.",
+      "npcSubtext": "Hub 5/10. The conversation deepens around what it means to feel genuinely understood.",
+      "choices": [
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_A",
+          "display": "\"Youre not wrong about what it means to feel genuinely understood. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED_BRANCH_A"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_B",
+          "display": "\"Theres fire in how you talk about what it means to feel genuinely understood... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED_BRANCH_B"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_C",
+          "display": "\"I can respect your take on what it means to feel genuinely understood, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_SUPPORTED_CONTINUED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_02_SUPPORTED_CONTINUED_BRANCH_A": {
+      "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_A",
+      "npcDialogue": "Rome exhales slower this time, shoulders finally dropping. Okay. If were talking about what it means to feel genuinely understood, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 5.",
+      "choices": [
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_A_A",
+          "display": "\"You dont have to carry what it means to feel genuinely understood alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_A_B",
+          "display": "\"For what it means to feel genuinely understood, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_A_C",
+          "display": "\"On what it means to feel genuinely understood, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_ANNOYED"
+        }
+      ]
+    },
+    "ROME_02_SUPPORTED_CONTINUED_BRANCH_B": {
+      "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_B",
+      "npcDialogue": "She tilts her head, half amused and half cautious. Okay. If were talking about what it means to feel genuinely understood, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 5.",
+      "choices": [
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_B_A",
+          "display": "\"Youre intense about what it means to feel genuinely understood, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_B_B",
+          "display": "\"Tell me one truth about what it means to feel genuinely understood you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through what it means to feel genuinely understood, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_ANNOYED"
+        }
+      ]
+    },
+    "ROME_02_SUPPORTED_CONTINUED_BRANCH_C": {
+      "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_C",
+      "npcDialogue": "She plants her feet and watches you like this is a challenge round. Okay. If were talking about what it means to feel genuinely understood, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 5.",
+      "choices": [
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_C_A",
+          "display": "\"I can handle conflict around what it means to feel genuinely understood; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_C_B",
+          "display": "\"If what it means to feel genuinely understood keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_ANNOYED"
+        },
+        {
+          "id": "ROME_02_SUPPORTED_CONTINUED_BRANCH_C_C",
+          "display": "\"On what it means to feel genuinely understood, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_ANNOYED"
+        }
+      ]
+    },
+    "ROME_02_ANNOYED": {
+      "id": "ROME_02_ANNOYED",
+      "npcDialogue": "Rome studies you for a second. About how fast advice can feel like judgment... I need the real version from you, not the polished one.",
+      "npcAction": "She taps her fingers against her knee, waiting for your answer without looking away.",
+      "npcSubtext": "Hub 6/10. The conversation deepens around how fast advice can feel like judgment.",
+      "choices": [
+        {
+          "id": "ROME_02_ANNOYED_A",
+          "display": "\"Youre not wrong about how fast advice can feel like judgment. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_ANNOYED_BRANCH_A"
+        },
+        {
+          "id": "ROME_02_ANNOYED_B",
+          "display": "\"Theres fire in how you talk about how fast advice can feel like judgment... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_02_ANNOYED_BRANCH_B"
+        },
+        {
+          "id": "ROME_02_ANNOYED_C",
+          "display": "\"I can respect your take on how fast advice can feel like judgment, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_ANNOYED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_02_ANNOYED_BRANCH_A": {
+      "id": "ROME_02_ANNOYED_BRANCH_A",
+      "npcDialogue": "Rome exhales slower this time, shoulders finally dropping. Okay. If were talking about how fast advice can feel like judgment, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 6.",
+      "choices": [
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_A_A",
+          "display": "\"You dont have to carry how fast advice can feel like judgment alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_A_B",
+          "display": "\"For how fast advice can feel like judgment, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_A_C",
+          "display": "\"On how fast advice can feel like judgment, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        }
+      ]
+    },
+    "ROME_02_ANNOYED_BRANCH_B": {
+      "id": "ROME_02_ANNOYED_BRANCH_B",
+      "npcDialogue": "She tilts her head, half amused and half cautious. Okay. If were talking about how fast advice can feel like judgment, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 6.",
+      "choices": [
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_B_A",
+          "display": "\"Youre intense about how fast advice can feel like judgment, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_B_B",
+          "display": "\"Tell me one truth about how fast advice can feel like judgment you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through how fast advice can feel like judgment, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        }
+      ]
+    },
+    "ROME_02_ANNOYED_BRANCH_C": {
+      "id": "ROME_02_ANNOYED_BRANCH_C",
+      "npcDialogue": "She plants her feet and watches you like this is a challenge round. Okay. If were talking about how fast advice can feel like judgment, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 6.",
+      "choices": [
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_C_A",
+          "display": "\"I can handle conflict around how fast advice can feel like judgment; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_C_B",
+          "display": "\"If how fast advice can feel like judgment keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        },
+        {
+          "id": "ROME_02_ANNOYED_BRANCH_C_C",
+          "display": "\"On how fast advice can feel like judgment, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_DEFENSIVE"
+        }
+      ]
+    },
+    "ROME_02_DEFENSIVE": {
+      "id": "ROME_02_DEFENSIVE",
+      "npcDialogue": "Rome studies you for a second. About what competition has cost her emotionally... I need the real version from you, not the polished one.",
+      "npcAction": "She leans back, then forward again like she cannot decide between defense and trust.",
+      "npcSubtext": "Hub 7/10. The conversation deepens around what competition has cost her emotionally.",
+      "choices": [
+        {
+          "id": "ROME_02_DEFENSIVE_A",
+          "display": "\"Youre not wrong about what competition has cost her emotionally. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_DEFENSIVE_BRANCH_A"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_B",
+          "display": "\"Theres fire in how you talk about what competition has cost her emotionally... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_02_DEFENSIVE_BRANCH_B"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_C",
+          "display": "\"I can respect your take on what competition has cost her emotionally, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_DEFENSIVE_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_02_DEFENSIVE_BRANCH_A": {
+      "id": "ROME_02_DEFENSIVE_BRANCH_A",
+      "npcDialogue": "Her voice softens and she shifts closer on the bench. Okay. If were talking about what competition has cost her emotionally, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 7.",
+      "choices": [
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_A_A",
+          "display": "\"You dont have to carry what competition has cost her emotionally alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_A_B",
+          "display": "\"For what competition has cost her emotionally, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_A_C",
+          "display": "\"On what competition has cost her emotionally, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_CHARMED"
+        }
+      ]
+    },
+    "ROME_02_DEFENSIVE_BRANCH_B": {
+      "id": "ROME_02_DEFENSIVE_BRANCH_B",
+      "npcDialogue": "There is a charged pause before she answers, like she enjoys the risk. Okay. If were talking about what competition has cost her emotionally, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 7.",
+      "choices": [
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_B_A",
+          "display": "\"Youre intense about what competition has cost her emotionally, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_B_B",
+          "display": "\"Tell me one truth about what competition has cost her emotionally you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_B_C",
+          "display": "\"If we chase chemistry through what competition has cost her emotionally, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_CHARMED"
+        }
+      ]
+    },
+    "ROME_02_DEFENSIVE_BRANCH_C": {
+      "id": "ROME_02_DEFENSIVE_BRANCH_C",
+      "npcDialogue": "Rome folds her arms, then forces herself to stay present. Okay. If were talking about what competition has cost her emotionally, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 7.",
+      "choices": [
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_C_A",
+          "display": "\"I can handle conflict around what competition has cost her emotionally; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_C_B",
+          "display": "\"If what competition has cost her emotionally keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_CHARMED"
+        },
+        {
+          "id": "ROME_02_DEFENSIVE_BRANCH_C_C",
+          "display": "\"On what competition has cost her emotionally, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_CHARMED"
+        }
+      ]
+    },
+    "ROME_02_CHARMED": {
+      "id": "ROME_02_CHARMED",
+      "npcDialogue": "Rome studies you for a second. About whether chemistry can survive honesty... I need the real version from you, not the polished one.",
+      "npcAction": "She taps her fingers against her knee, waiting for your answer without looking away.",
+      "npcSubtext": "Hub 8/10. The conversation deepens around whether chemistry can survive honesty.",
+      "choices": [
+        {
+          "id": "ROME_02_CHARMED_A",
+          "display": "\"Youre not wrong about whether chemistry can survive honesty. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_CHARMED_BRANCH_A"
+        },
+        {
+          "id": "ROME_02_CHARMED_B",
+          "display": "\"Theres fire in how you talk about whether chemistry can survive honesty... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_02_CHARMED_BRANCH_B"
+        },
+        {
+          "id": "ROME_02_CHARMED_C",
+          "display": "\"I can respect your take on whether chemistry can survive honesty, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_CHARMED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_02_CHARMED_BRANCH_A": {
+      "id": "ROME_02_CHARMED_BRANCH_A",
+      "npcDialogue": "Her voice softens and she shifts closer on the bench. Okay. If were talking about whether chemistry can survive honesty, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 8.",
+      "choices": [
+        {
+          "id": "ROME_02_CHARMED_BRANCH_A_A",
+          "display": "\"You dont have to carry whether chemistry can survive honesty alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_A_B",
+          "display": "\"For whether chemistry can survive honesty, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_A_C",
+          "display": "\"On whether chemistry can survive honesty, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_VALIDATED"
+        }
+      ]
+    },
+    "ROME_02_CHARMED_BRANCH_B": {
+      "id": "ROME_02_CHARMED_BRANCH_B",
+      "npcDialogue": "There is a charged pause before she answers, like she enjoys the risk. Okay. If were talking about whether chemistry can survive honesty, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 8.",
+      "choices": [
+        {
+          "id": "ROME_02_CHARMED_BRANCH_B_A",
+          "display": "\"Youre intense about whether chemistry can survive honesty, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_B_B",
+          "display": "\"Tell me one truth about whether chemistry can survive honesty you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through whether chemistry can survive honesty, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_VALIDATED"
+        }
+      ]
+    },
+    "ROME_02_CHARMED_BRANCH_C": {
+      "id": "ROME_02_CHARMED_BRANCH_C",
+      "npcDialogue": "Rome folds her arms, then forces herself to stay present. Okay. If were talking about whether chemistry can survive honesty, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 8.",
+      "choices": [
+        {
+          "id": "ROME_02_CHARMED_BRANCH_C_A",
+          "display": "\"I can handle conflict around whether chemistry can survive honesty; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_C_B",
+          "display": "\"If whether chemistry can survive honesty keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_02_VALIDATED"
+        },
+        {
+          "id": "ROME_02_CHARMED_BRANCH_C_C",
+          "display": "\"On whether chemistry can survive honesty, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_VALIDATED"
+        }
+      ]
+    },
+    "ROME_02_VALIDATED": {
+      "id": "ROME_02_VALIDATED",
+      "npcDialogue": "Rome studies you for a second. About how to lead without hardening... I need the real version from you, not the polished one.",
+      "npcAction": "She leans back, then forward again like she cannot decide between defense and trust.",
+      "npcSubtext": "Hub 9/10. The conversation deepens around how to lead without hardening.",
+      "choices": [
+        {
+          "id": "ROME_02_VALIDATED_A",
+          "display": "\"Youre not wrong about how to lead without hardening. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_02_VALIDATED_BRANCH_A"
+        },
+        {
+          "id": "ROME_02_VALIDATED_B",
+          "display": "\"Theres fire in how you talk about how to lead without hardening... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_02_VALIDATED_BRANCH_B"
+        },
+        {
+          "id": "ROME_02_VALIDATED_C",
+          "display": "\"I can respect your take on how to lead without hardening, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_02_VALIDATED_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_02_VALIDATED_BRANCH_A": {
+      "id": "ROME_02_VALIDATED_BRANCH_A",
+      "npcDialogue": "She lets the edge out of her tone and meets your eyes. Okay. If were talking about how to lead without hardening, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 9.",
+      "choices": [
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_A_A",
+          "display": "\"You dont have to carry how to lead without hardening alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_A_B",
+          "display": "\"For how to lead without hardening, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_A_C",
+          "display": "\"On how to lead without hardening, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        }
+      ]
+    },
+    "ROME_02_VALIDATED_BRANCH_B": {
+      "id": "ROME_02_VALIDATED_BRANCH_B",
+      "npcDialogue": "Rome gives you a sideways smile, still keyed up but curious. Okay. If were talking about how to lead without hardening, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 9.",
+      "choices": [
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_B_A",
+          "display": "\"Youre intense about how to lead without hardening, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_B_B",
+          "display": "\"Tell me one truth about how to lead without hardening you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_B_C",
+          "display": "\"If we chase chemistry through how to lead without hardening, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        }
+      ]
+    },
+    "ROME_02_VALIDATED_BRANCH_C": {
+      "id": "ROME_02_VALIDATED_BRANCH_C",
+      "npcDialogue": "Her jaw tightens before she answers, direct and unapologetic. Okay. If were talking about how to lead without hardening, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 9.",
+      "choices": [
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_C_A",
+          "display": "\"I can handle conflict around how to lead without hardening; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_C_B",
+          "display": "\"If how to lead without hardening keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        },
+        {
+          "id": "ROME_02_VALIDATED_BRANCH_C_C",
+          "display": "\"On how to lead without hardening, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_03_DATE_SETUP"
+        }
+      ]
+    },
+    "ROME_03_DATE_SETUP": {
+      "id": "ROME_03_DATE_SETUP",
+      "npcDialogue": "Rome studies you for a second. About turning this from talk into action... I need the real version from you, not the polished one.",
+      "npcAction": "She taps her fingers against her knee, waiting for your answer without looking away.",
+      "npcSubtext": "Hub 10/10. The conversation deepens around turning this from talk into action.",
+      "choices": [
+        {
+          "id": "ROME_03_DATE_SETUP_A",
+          "display": "\"Youre not wrong about turning this from talk into action. Im here with you, not against you.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.02,
+            "respect": 0.01
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_03_DATE_SETUP_BRANCH_A"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_B",
+          "display": "\"Theres fire in how you talk about turning this from talk into action... and yeah, I feel it too.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0,
+            "attraction": 0.03,
+            "comfort": 0,
+            "respect": 0.01
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_03_DATE_SETUP_BRANCH_B"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_C",
+          "display": "\"I can respect your take on turning this from talk into action, but I need us to meet in the middle.\"",
+          "intent": "Challenge",
+          "tone": "Measured",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_03_DATE_SETUP_BRANCH_C"
+        }
+      ]
+    },
+    "ROME_03_DATE_SETUP_BRANCH_A": {
+      "id": "ROME_03_DATE_SETUP_BRANCH_A",
+      "npcDialogue": "She lets the edge out of her tone and meets your eyes. Okay. If were talking about turning this from talk into action, tell me what you actually want from me right now.",
+      "npcAction": "She relaxes a little, but stays attentive to every word.",
+      "npcSubtext": "Warm momentum. She is testing whether your support is consistent, not just convenient. Branch A at hub 10.",
+      "choices": [
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_A_A",
+          "display": "\"You dont have to carry turning this from talk into action alone. Let me be in this with you.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_END_WARM"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_A_B",
+          "display": "\"For turning this from talk into action, what helps more right now: listening, challenge, or quiet company?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_END_BALANCED"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_A_C",
+          "display": "\"On turning this from talk into action, Im with you, and I still need us to keep this kind.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_END_TENSE"
+        }
+      ]
+    },
+    "ROME_03_DATE_SETUP_BRANCH_B": {
+      "id": "ROME_03_DATE_SETUP_BRANCH_B",
+      "npcDialogue": "Rome gives you a sideways smile, still keyed up but curious. Okay. If were talking about turning this from talk into action, tell me what you actually want from me right now.",
+      "npcAction": "She gives a short laugh, then searches your face for sincerity.",
+      "npcSubtext": "Charged momentum. Attraction is rising, but trust still needs proof. Branch B at hub 10.",
+      "choices": [
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_B_A",
+          "display": "\"Youre intense about turning this from talk into action, and that intensity is honestly attractive.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_END_WARM"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_B_B",
+          "display": "\"Tell me one truth about turning this from talk into action you usually keep locked up.\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_END_BALANCED"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_B_C",
+          "display": "\"If we chase chemistry through turning this from talk into action, I need us not to become collateral.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_END_TENSE"
+        }
+      ]
+    },
+    "ROME_03_DATE_SETUP_BRANCH_C": {
+      "id": "ROME_03_DATE_SETUP_BRANCH_C",
+      "npcDialogue": "Her jaw tightens before she answers, direct and unapologetic. Okay. If were talking about turning this from talk into action, tell me what you actually want from me right now.",
+      "npcAction": "She straightens up, competitive instinct still visible even in quiet.",
+      "npcSubtext": "Friction momentum. This can sharpen into respect or fracture into distance. Branch C at hub 10.",
+      "choices": [
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_C_A",
+          "display": "\"I can handle conflict around turning this from talk into action; I wont run just because its hard.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 0.03,
+            "trust": 0.02,
+            "attraction": 0.01,
+            "comfort": 0.03,
+            "respect": 0.02
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_END_WARM"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_C_B",
+          "display": "\"If turning this from talk into action keeps building pressure, what does your strongest move look like?\"",
+          "intent": "Be Curious",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0.01,
+            "trust": 0.02,
+            "attraction": 0,
+            "comfort": 0.01,
+            "respect": 0.01
+          },
+          "moodResponse": "Sad",
+          "nextSceneId": "ROME_END_BALANCED"
+        },
+        {
+          "id": "ROME_03_DATE_SETUP_BRANCH_C_C",
+          "display": "\"On turning this from talk into action, push me if you need to, but I wont stay where respect disappears.\"",
+          "intent": "Boundary",
+          "tone": "Firm",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -0.02,
+            "trust": -0.01,
+            "attraction": 0,
+            "comfort": -0.02,
+            "respect": -0.01
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_END_TENSE"
+        }
+      ]
+    },
+    "ROME_END_WARM": {
+      "id": "ROME_END_WARM",
+      "npcDialogue": "Rome smiles and bumps your shoulder. That felt right. Lets keep this going.",
+      "npcAction": "She relaxes fully for the first time all evening.",
+      "npcSubtext": "Warm ending.",
+      "choices": []
+    },
+    "ROME_END_BALANCED": {
+      "id": "ROME_END_BALANCED",
+      "npcDialogue": "Rome nods. Messy, but real. I can work with real.",
+      "npcAction": "She exhales, calmer than when the conversation began.",
+      "npcSubtext": "Balanced ending.",
+      "choices": []
+    },
+    "ROME_END_TENSE": {
+      "id": "ROME_END_TENSE",
+      "npcDialogue": "Rome glances away, then back. I need space, but I hear you.",
+      "npcAction": "She stands, giving you one last searching look.",
+      "npcSubtext": "Tense ending.",
+      "choices": []
+    }
+  }
+}

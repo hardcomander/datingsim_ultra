@@ -1,0 +1,174 @@
+{
+  "_doc": {
+    "title": "DatingSim Story Markup Template",
+    "purpose": "Authoring format for graph-v1 story files consumed by the game.",
+    "rules": [
+      "Use decimal stat deltas (e.g., 0.03, -0.02).",
+      "Every choice id must be unique across the file.",
+      "Every nextSceneId must exist in nodes OR be null for terminal choices.",
+      "Use moodResponse for image/mood hooks: Happy, Sad, Angry, Surprised, Scared, Disgusted.",
+      "A terminal node should have an empty choices array."
+    ]
+  },
+  "storyTemplate": {
+    "format": "graph-v1",
+    "id": "romeChapter1",
+    "npc": {
+      "id": "rome",
+      "name": "Rome Kline",
+      "type": "athlete",
+      "location": "Park bench, late afternoon",
+      "initialStats": {
+        "affinity": 0,
+        "trust": 0,
+        "attraction": 0,
+        "comfort": 0,
+        "respect": 0
+      },
+      "currentMood": "frustrated after practice"
+    },
+    "backdrop": "Cattails Park",
+    "background": "locations/park_bench.png",
+    "sceneContext": "Post-practice conversation with branching outcomes.",
+    "startSceneId": "ROME_01_START",
+    "nodes": {
+      "ROME_01_START": {
+        "id": "ROME_01_START",
+        "npcDialogue": "Rome drops onto the bench, breathing hard. \"Practice was a disaster.\"",
+        "npcAction": "Wipes sweat from her face",
+        "npcSubtext": "She needs validation but is defensive.",
+        "choices": [
+          {
+            "id": "ROME_01_START_A",
+            "display": "That sounds frustrating. Want to vent?",
+            "intent": "Support",
+            "tone": "Warm",
+            "riskLevel": "Low",
+            "statDeltas": {
+              "affinity": 0.03,
+              "trust": 0.02,
+              "attraction": 0.01,
+              "comfort": 0.02,
+              "respect": 0.01
+            },
+            "moodResponse": "Happy",
+            "nextSceneId": "ROME_01_SUPPORTED"
+          },
+          {
+            "id": "ROME_01_START_B",
+            "display": "Maybe your keeper just had a rough day.",
+            "intent": "Challenge",
+            "tone": "Measured",
+            "riskLevel": "Moderate",
+            "statDeltas": {
+              "affinity": -0.01,
+              "trust": 0,
+              "attraction": 0,
+              "comfort": -0.02,
+              "respect": -0.01
+            },
+            "moodResponse": "Angry",
+            "nextSceneId": "ROME_01_CHALLENGED"
+          },
+          {
+            "id": "ROME_01_START_C",
+            "display": "You look really good when you're fired up.",
+            "intent": "Flirt",
+            "tone": "Bold",
+            "riskLevel": "Moderate",
+            "statDeltas": {
+              "affinity": 0.02,
+              "trust": 0,
+              "attraction": 0.04,
+              "comfort": -0.01,
+              "respect": 0.01
+            },
+            "moodResponse": "Surprised",
+            "nextSceneId": "ROME_01_FLUSTERED"
+          }
+        ]
+      },
+      "ROME_01_SUPPORTED": {
+        "id": "ROME_01_SUPPORTED",
+        "npcDialogue": "Rome exhales. \"Thanks. Most people tell me to calm down instead of listening.\"",
+        "choices": [
+          {
+            "id": "ROME_01_SUPPORTED_A",
+            "display": "I'm listening. Keep going.",
+            "intent": "Support",
+            "tone": "Gentle",
+            "riskLevel": "Low",
+            "statDeltas": {
+              "affinity": 0.03,
+              "trust": 0.03,
+              "attraction": 0.01,
+              "comfort": 0.03,
+              "respect": 0.02
+            },
+            "moodResponse": "Happy",
+            "nextSceneId": "ROME_02_SUPPORTED_CONTINUED"
+          }
+        ]
+      },
+      "ROME_01_CHALLENGED": {
+        "id": "ROME_01_CHALLENGED",
+        "npcDialogue": "Rome tenses. \"You don't get what this costs us.\"",
+        "choices": [
+          {
+            "id": "ROME_01_CHALLENGED_A",
+            "display": "You're right. I spoke too fast.",
+            "intent": "Repair",
+            "tone": "Soft",
+            "riskLevel": "Low",
+            "statDeltas": {
+              "affinity": 0.01,
+              "trust": 0.01,
+              "attraction": 0,
+              "comfort": 0.01,
+              "respect": 0.01
+            },
+            "moodResponse": "Sad",
+            "nextSceneId": "ROME_02_RECOVERY"
+          }
+        ]
+      },
+      "ROME_01_FLUSTERED": {
+        "id": "ROME_01_FLUSTERED",
+        "npcDialogue": "Rome blinks, then laughs. \"That was bold.\"",
+        "choices": [
+          {
+            "id": "ROME_01_FLUSTERED_A",
+            "display": "Had to make you smile somehow.",
+            "intent": "Flirt",
+            "tone": "Playful",
+            "riskLevel": "Moderate",
+            "statDeltas": {
+              "affinity": 0.03,
+              "trust": 0.01,
+              "attraction": 0.04,
+              "comfort": 0.01,
+              "respect": 0.02
+            },
+            "moodResponse": "Happy",
+            "nextSceneId": "ROME_02_PLAYFUL"
+          }
+        ]
+      },
+      "ROME_02_SUPPORTED_CONTINUED": {
+        "id": "ROME_02_SUPPORTED_CONTINUED",
+        "npcDialogue": "Rome relaxes into the bench. \"You really get me.\"",
+        "choices": []
+      },
+      "ROME_02_RECOVERY": {
+        "id": "ROME_02_RECOVERY",
+        "npcDialogue": "She nods slowly, still guarded but calmer.",
+        "choices": []
+      },
+      "ROME_02_PLAYFUL": {
+        "id": "ROME_02_PLAYFUL",
+        "npcDialogue": "She grins. \"Okay, maybe I needed that.\"",
+        "choices": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2373 @@
+{
+  "format": "graph-v1",
+  "id": "romeChapter1",
+  "title": "The Spark",
+  "npc": {
+    "id": "rome",
+    "name": "Rome Kline",
+    "type": "athlete",
+    "sport": "soccer",
+    "position": "forward",
+    "role": "team captain",
+    "location": "Park bench, late afternoon",
+    "initialStats": {
+      "affinity": 0,
+      "trust": 0,
+      "attraction": 0,
+      "comfort": 0,
+      "respect": 0
+    },
+    "currentMood": "frustrated after practice"
+  },
+  "backdrop": "Cattails Park",
+  "background": "locations/park_bench.png",
+  "sceneContext": "Rome just finished a disastrous practice. Her team's goalkeeper let in three easy goals with regionals three weeks away. You're sitting on a park bench when she drops down next to you, sweaty and frustrated.",
+  "startSceneId": "ROME_HUB_01",
+  
+  "nodes": {
+    
+    "ROME_HUB_01": {
+      "id": "ROME_HUB_01",
+      "hubNumber": 1,
+      "hubName": "The Hook - Practice Disaster",
+      "npcDialogue": "Mind if I sit? I need a minute before I lose my shit completely.",
+      "npcAction": "Rome drops onto the bench beside you, breathing hard. She wipes sweat from her face with the bottom of her practice jersey, revealing toned abs for a moment before she lets it fall.",
+      "npcSubtext": "She's a powder keg of frustration and competitive energy. First impression moment.",
+      "choices": [
+        {
+          "id": "ROME_HUB_01_A",
+          "display": "\"Rough practice? You look like you just ran a marathon.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 2,
+            "attraction": 0,
+            "comfort": 2,
+            "respect": 1
+          },
+          "moodResponse": "Grateful",
+          "nextSceneId": "ROME_HUB_01_SUPPORTED"
+        },
+        {
+          "id": "ROME_HUB_01_B",
+          "display": "\"You can lose your shit. I don't mind the show.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 0,
+            "attraction": 3,
+            "comfort": -1,
+            "respect": 1
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_HUB_01_FLIRTED"
+        },
+        {
+          "id": "ROME_HUB_01_C",
+          "display": "\"Maybe you need to chill instead of getting so worked up.\"",
+          "intent": "Challenge",
+          "tone": "Dismissive",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -2,
+            "trust": -1,
+            "attraction": 0,
+            "comfort": -3,
+            "respect": -2
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_HUB_01_CHALLENGED"
+        }
+      ]
+    },
+
+    "ROME_HUB_01_SUPPORTED": {
+      "id": "ROME_HUB_01_SUPPORTED",
+      "hubNumber": 1,
+      "npcDialogue": "Rough doesn't even cover it. Our keeper let in three goals today. THREE. Easy saves that a high schooler could've made. And regionals are in three weeks.",
+      "npcAction": "She leans back against the bench, staring up at the sky with barely contained fury.",
+      "npcSubtext": "She's venting. Needs validation, not solutions.",
+      "choices": [
+        {
+          "id": "ROME_HUB_01_SUPPORTED_A",
+          "display": "\"That sounds incredibly frustrating. Especially with regionals coming up.\"",
+          "intent": "Validate",
+          "tone": "Empathetic",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 1,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_HUB_02"
+        },
+        {
+          "id": "ROME_HUB_01_SUPPORTED_B",
+          "display": "\"Three goals? Damn. What's your coach saying about it?\"",
+          "intent": "Engage",
+          "tone": "Curious",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 2,
+            "attraction": 0,
+            "comfort": 2,
+            "respect": 1
+          },
+          "moodResponse": "Neutral",
+          "nextSceneId": "ROME_HUB_02"
+        },
+        {
+          "id": "ROME_HUB_01_SUPPORTED_C",
+          "display": "\"Maybe she was just having an off day. Everyone does.\"",
+          "intent": "Defend",
+          "tone": "Diplomatic",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": -1,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": -2,
+            "respect": -1
+          },
+          "moodResponse": "Frustrated",
+          "nextSceneId": "ROME_HUB_02_ANNOYED"
+        }
+      ]
+    },
+
+    "ROME_HUB_01_FLIRTED": {
+      "id": "ROME_HUB_01_FLIRTED",
+      "hubNumber": 1,
+      "npcDialogue": "Oh, so you want a show?",
+      "npcAction": "She turns to look at you directly, eyebrow raised. There's a hint of amusement breaking through her frustration.",
+      "npcSubtext": "Caught off guard by your boldness. Intrigued but testing you.",
+      "choices": [
+        {
+          "id": "ROME_HUB_01_FLIRTED_A",
+          "display": "\"Only if you're the one putting it on.\"",
+          "intent": "Double Down",
+          "tone": "Bold",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 0,
+            "attraction": 4,
+            "comfort": 0,
+            "respect": 2
+          },
+          "moodResponse": "Intrigued",
+          "nextSceneId": "ROME_HUB_02_FLIRTY"
+        },
+        {
+          "id": "ROME_HUB_01_FLIRTED_B",
+          "display": "\"I meant you look like you need to vent. What happened?\"",
+          "intent": "Backtrack",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 2,
+            "attraction": 1,
+            "comfort": 2,
+            "respect": 0
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_02"
+        },
+        {
+          "id": "ROME_HUB_01_FLIRTED_C",
+          "display": "\"You're cute when you're pissed off.\"",
+          "intent": "Flirt Harder",
+          "tone": "Playful",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": -1,
+            "attraction": 5,
+            "comfort": -1,
+            "respect": 1
+          },
+          "moodResponse": "Flustered",
+          "nextSceneId": "ROME_HUB_02_FLIRTY"
+        }
+      ]
+    },
+
+    "ROME_HUB_01_CHALLENGED": {
+      "id": "ROME_HUB_01_CHALLENGED",
+      "hubNumber": 1,
+      "npcDialogue": "Chill? Are you serious right now?",
+      "npcAction": "She turns sharply to face you, jaw tight. Her whole body language shifts from frustrated to defensive.",
+      "npcSubtext": "You've immediately gotten on her bad side. This is recoverable but you're starting in the red.",
+      "choices": [
+        {
+          "id": "ROME_HUB_01_CHALLENGED_A",
+          "display": "\"Sorry, that came out wrong. What happened at practice?\"",
+          "intent": "Apologize",
+          "tone": "Conciliatory",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 1,
+            "attraction": 0,
+            "comfort": 1,
+            "respect": 1
+          },
+          "moodResponse": "Wary",
+          "nextSceneId": "ROME_HUB_02_RECOVERY"
+        },
+        {
+          "id": "ROME_HUB_01_CHALLENGED_B",
+          "display": "\"Yeah, chill. It's just a game, right?\"",
+          "intent": "Double Down",
+          "tone": "Dismissive",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": -4,
+            "trust": -3,
+            "attraction": -2,
+            "comfort": -5,
+            "respect": -4
+          },
+          "moodResponse": "Furious",
+          "nextSceneId": "ROME_HUB_02_HOSTILE"
+        },
+        {
+          "id": "ROME_HUB_01_CHALLENGED_C",
+          "display": "\"I just meant you look stressed. Deep breath?\"",
+          "intent": "Soften",
+          "tone": "Careful",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": 0,
+            "respect": 0
+          },
+          "moodResponse": "Annoyed",
+          "nextSceneId": "ROME_HUB_02_RECOVERY"
+        }
+      ]
+    },
+
+    "ROME_HUB_02": {
+      "id": "ROME_HUB_02",
+      "hubNumber": 2,
+      "hubName": "The Pressure",
+      "npcDialogue": "It's not just about the goals. I'm team captain. When the keeper screws up, it reflects on me. When we lose, it's on me. My scholarship depends on us making it to nationals, and if we can't even get through regionals...",
+      "npcAction": "Her voice cracks slightly at the end. She catches herself and looks away, jaw clenched.",
+      "npcSubtext": "She's revealing real vulnerability. This is the moment to build trust or push attraction.",
+      "choices": [
+        {
+          "id": "ROME_HUB_02_A",
+          "display": "\"That's a lot of pressure to carry alone. You shouldn't have to do it all by yourself.\"",
+          "intent": "Support",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 2,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Vulnerable",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        },
+        {
+          "id": "ROME_HUB_02_B",
+          "display": "*move closer* \"Hey. Look at me. You're going to get through this.\"",
+          "intent": "Comfort",
+          "tone": "Intimate",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 5,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Touched",
+          "nextSceneId": "ROME_HUB_03_INTIMATE"
+        },
+        {
+          "id": "ROME_HUB_02_C",
+          "display": "\"You're the captain. Have you tried actually talking to your keeper about this?\"",
+          "intent": "Advise",
+          "tone": "Practical",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": -1,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": -2,
+            "respect": 1
+          },
+          "moodResponse": "Defensive",
+          "nextSceneId": "ROME_HUB_03_ADVICE"
+        }
+      ]
+    },
+
+    "ROME_HUB_02_FLIRTY": {
+      "id": "ROME_HUB_02_FLIRTY",
+      "hubNumber": 2,
+      "npcDialogue": "You know what? Screw the practice drama for a second. Who even are you? I see you around campus but we've never actually talked.",
+      "npcAction": "She shifts to face you fully, one leg tucked under her on the bench. Her eyes are curious now, less angry.",
+      "npcSubtext": "She's deflecting from vulnerability but also genuinely interested. Flirty path accelerating.",
+      "choices": [
+        {
+          "id": "ROME_HUB_02_FLIRTY_A",
+          "display": "\"I'm the person who's been noticing you too. Glad we're finally talking.\"",
+          "intent": "Reciprocate",
+          "tone": "Flirty",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 2,
+            "attraction": 6,
+            "comfort": 2,
+            "respect": 2
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_HUB_03_MUTUAL"
+        },
+        {
+          "id": "ROME_HUB_02_FLIRTY_B",
+          "display": "\"Just someone who happened to be in the right place when a beautiful athlete needed a bench.\"",
+          "intent": "Charm",
+          "tone": "Smooth",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 1,
+            "attraction": 5,
+            "comfort": 2,
+            "respect": 2
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_03_MUTUAL"
+        },
+        {
+          "id": "ROME_HUB_02_FLIRTY_C",
+          "display": "\"Tell me about the scholarship. What's riding on this?\"",
+          "intent": "Pivot",
+          "tone": "Serious",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 3,
+            "attraction": 2,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Grateful",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        }
+      ]
+    },
+
+    "ROME_HUB_02_ANNOYED": {
+      "id": "ROME_HUB_02_ANNOYED",
+      "hubNumber": 2,
+      "npcDialogue": "An off day? She's had an off WEEK. This isn't a one-time thing, and I can't keep covering for her mistakes.",
+      "npcAction": "She stands up abruptly and starts pacing.",
+      "npcSubtext": "You defended the keeper and now she's more agitated. Need to de-escalate or this spirals.",
+      "choices": [
+        {
+          "id": "ROME_HUB_02_ANNOYED_A",
+          "display": "\"You're right. I don't know the full situation. Tell me what's really going on.\"",
+          "intent": "Back Down",
+          "tone": "Apologetic",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 2,
+            "attraction": 0,
+            "comfort": 1,
+            "respect": 2
+          },
+          "moodResponse": "Mollified",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        },
+        {
+          "id": "ROME_HUB_02_ANNOYED_B",
+          "display": "\"Sounds like you're being pretty hard on a teammate.\"",
+          "intent": "Push Back",
+          "tone": "Critical",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": -3,
+            "trust": -2,
+            "attraction": -1,
+            "comfort": -4,
+            "respect": -3
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_HUB_03_CONFLICT"
+        },
+        {
+          "id": "ROME_HUB_02_ANNOYED_C",
+          "display": "\"What would help right now? Venting or distraction?\"",
+          "intent": "Redirect",
+          "tone": "Practical",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 2,
+            "attraction": 1,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        }
+      ]
+    },
+
+    "ROME_HUB_02_RECOVERY": {
+      "id": "ROME_HUB_02_RECOVERY",
+      "hubNumber": 2,
+      "npcDialogue": "Fine. Practice was a disaster. Our keeper let in three easy goals and regionals are in three weeks. Happy now?",
+      "npcAction": "She's still tense but sitting back down, giving you another chance.",
+      "npcSubtext": "She's wary but willing to continue. You're on thin ice but it's not broken yet.",
+      "choices": [
+        {
+          "id": "ROME_HUB_02_RECOVERY_A",
+          "display": "\"That sounds really stressful. What's at stake for you personally?\"",
+          "intent": "Empathize",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 1,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Softening",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        },
+        {
+          "id": "ROME_HUB_02_RECOVERY_B",
+          "display": "\"I get it. High stakes, high pressure. You need to win.\"",
+          "intent": "Validate",
+          "tone": "Understanding",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 2,
+            "attraction": 0,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_HUB_03_OPENING"
+        },
+        {
+          "id": "ROME_HUB_02_RECOVERY_C",
+          "display": "\"Look, I'm just trying to talk. Don't bite my head off.\"",
+          "intent": "Defend",
+          "tone": "Frustrated",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": -1,
+            "respect": 1
+          },
+          "moodResponse": "Irritated",
+          "nextSceneId": "ROME_HUB_03_TENSE"
+        }
+      ]
+    },
+
+    "ROME_HUB_02_HOSTILE": {
+      "id": "ROME_HUB_02_HOSTILE",
+      "hubNumber": 2,
+      "npcDialogue": "Just a game? You know what, forget it. I don't need to justify my life to some random person on a bench.",
+      "npcAction": "She stands up, grabbing her gym bag.",
+      "npcSubtext": "You've seriously damaged this. She's about to walk away. Last chance to salvage.",
+      "choices": [
+        {
+          "id": "ROME_HUB_02_HOSTILE_A",
+          "display": "\"Wait. I'm sorry. That was stupid. Please don't leave.\"",
+          "intent": "Apologize",
+          "tone": "Desperate",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 1,
+            "attraction": 0,
+            "comfort": 0,
+            "respect": 1
+          },
+          "moodResponse": "Hesitant",
+          "nextSceneId": "ROME_HUB_03_FRAGILE"
+        },
+        {
+          "id": "ROME_HUB_02_HOSTILE_B",
+          "display": "\"Yeah, you're right. Good luck with your game.\"",
+          "intent": "Let Go",
+          "tone": "Cold",
+          "riskLevel": "Terminal",
+          "statDeltas": {
+            "affinity": -5,
+            "trust": -5,
+            "attraction": -3,
+            "comfort": -6,
+            "respect": -5
+          },
+          "moodResponse": "Disgusted",
+          "nextSceneId": "ROME_END_BLOWN_OFF"
+        },
+        {
+          "id": "ROME_HUB_02_HOSTILE_C",
+          "display": "*grab her wrist* \"Stop. I was wrong. Can we start over?\"",
+          "intent": "Physical Stop",
+          "tone": "Intense",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": -2,
+            "attraction": 2,
+            "comfort": -2,
+            "respect": 0
+          },
+          "moodResponse": "Shocked",
+          "nextSceneId": "ROME_HUB_03_VOLATILE"
+        }
+      ]
+    },
+
+    "ROME_HUB_03_OPENING": {
+      "id": "ROME_HUB_03_OPENING",
+      "hubNumber": 3,
+      "hubName": "The Connection",
+      "npcDialogue": "My scholarship covers everything. Tuition, housing, all of it. Without soccer, I can't afford to be here. My parents... they're doing their best, but money's tight. This is my only shot.",
+      "npcAction": "She looks down at her hands, picking at the tape on her wrists.",
+      "npcSubtext": "Real vulnerability. She's trusting you with something personal.",
+      "choices": [
+        {
+          "id": "ROME_HUB_03_OPENING_A",
+          "display": "\"That's a lot riding on your shoulders. No wonder you're intense about it.\"",
+          "intent": "Validate",
+          "tone": "Empathetic",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 2,
+            "comfort": 5,
+            "respect": 3
+          },
+          "moodResponse": "Grateful",
+          "nextSceneId": "ROME_HUB_04_DEEPENING"
+        },
+        {
+          "id": "ROME_HUB_03_OPENING_B",
+          "display": "\"You're going to do it. I can tell. You don't seem like someone who gives up.\"",
+          "intent": "Encourage",
+          "tone": "Confident",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 3,
+            "comfort": 3,
+            "respect": 4
+          },
+          "moodResponse": "Hopeful",
+          "nextSceneId": "ROME_HUB_04_DEEPENING"
+        },
+        {
+          "id": "ROME_HUB_03_OPENING_C",
+          "display": "\"So what happens if soccer doesn't work out? Do you have a backup plan?\"",
+          "intent": "Question",
+          "tone": "Practical",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": -2,
+            "respect": 1
+          },
+          "moodResponse": "Uncomfortable",
+          "nextSceneId": "ROME_HUB_04_GUARDED"
+        }
+      ]
+    },
+
+    "ROME_HUB_03_INTIMATE": {
+      "id": "ROME_HUB_03_INTIMATE",
+      "hubNumber": 3,
+      "npcDialogue": "Thanks. I... I don't usually talk about this stuff. Most people just see the athlete, you know? Not the person who's terrified of failing.",
+      "npcAction": "She meets your eyes, and for a moment, the space between you feels charged.",
+      "npcSubtext": "Emotional AND physical intimacy building. She's drawn to you.",
+      "choices": [
+        {
+          "id": "ROME_HUB_03_INTIMATE_A",
+          "display": "\"I see the person. And she's pretty incredible.\"",
+          "intent": "Romantic",
+          "tone": "Soft",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 4,
+            "attraction": 6,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Flustered",
+          "nextSceneId": "ROME_HUB_04_ROMANTIC"
+        },
+        {
+          "id": "ROME_HUB_03_INTIMATE_B",
+          "display": "*reach for her hand* \"You don't have to be perfect all the time.\"",
+          "intent": "Touch",
+          "tone": "Gentle",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Vulnerable",
+          "nextSceneId": "ROME_HUB_04_PHYSICAL"
+        },
+        {
+          "id": "ROME_HUB_03_INTIMATE_C",
+          "display": "\"Everyone's terrified of something. You're just brave enough to chase it anyway.\"",
+          "intent": "Support",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 3,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Moved",
+          "nextSceneId": "ROME_HUB_04_DEEPENING"
+        }
+      ]
+    },
+
+    "ROME_HUB_03_MUTUAL": {
+      "id": "ROME_HUB_03_MUTUAL",
+      "hubNumber": 3,
+      "npcDialogue": "Yeah? So you've been watching me?",
+      "npcAction": "She leans in slightly, a small smile playing at her lips despite the remnants of frustration.",
+      "npcSubtext": "Flirty energy is mutual. Chemistry building fast.",
+      "choices": [
+        {
+          "id": "ROME_HUB_03_MUTUAL_A",
+          "display": "\"Hard not to. You're kind of hard to miss.\"",
+          "intent": "Flirt",
+          "tone": "Playful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 2,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_HUB_04_FLIRTY"
+        },
+        {
+          "id": "ROME_HUB_03_MUTUAL_B",
+          "display": "\"Maybe. You going to tell me I'm creepy or can we call it mutual interest?\"",
+          "intent": "Bold",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 1,
+            "attraction": 8,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Intrigued",
+          "nextSceneId": "ROME_HUB_04_CHARGED"
+        },
+        {
+          "id": "ROME_HUB_03_MUTUAL_C",
+          "display": "\"I've noticed a lot of things about you. Like how you're avoiding talking about practice.\"",
+          "intent": "Tease",
+          "tone": "Observant",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 5,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Caught",
+          "nextSceneId": "ROME_HUB_04_DEFLECTING"
+        }
+      ]
+    },
+
+    "ROME_HUB_03_CONFLICT": {
+      "id": "ROME_HUB_03_CONFLICT",
+      "hubNumber": 3,
+      "npcDialogue": "Hard on her? I'm trying to WIN. Maybe you don't get what it's like to actually compete for something that matters.",
+      "npcAction": "She's standing now, fists clenched.",
+      "npcSubtext": "Major conflict. This can either become respect or turn into a dark route seed.",
+      "choices": [
+        {
+          "id": "ROME_HUB_03_CONFLICT_A",
+          "display": "\"You're right. I don't know what that's like. I'm sorry.\"",
+          "intent": "Surrender",
+          "tone": "Apologetic",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 1,
+            "attraction": 0,
+            "comfort": 1,
+            "respect": 2
+          },
+          "moodResponse": "Mollified",
+          "nextSceneId": "ROME_HUB_04_SALVAGED"
+        },
+        {
+          "id": "ROME_HUB_03_CONFLICT_B",
+          "display": "\"Actually, I do. And I know that destroying your teammates isn't how you build a winning team.\"",
+          "intent": "Challenge",
+          "tone": "Firm",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": -3,
+            "trust": -2,
+            "attraction": 1,
+            "comfort": -5,
+            "respect": 3
+          },
+          "moodResponse": "Furious",
+          "nextSceneId": "ROME_HUB_04_HOSTILE"
+        },
+        {
+          "id": "ROME_HUB_03_CONFLICT_C",
+          "display": "\"I think you need to cool off. Want me to leave you alone?\"",
+          "intent": "Withdraw",
+          "tone": "Detached",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": -2,
+            "trust": -1,
+            "attraction": 0,
+            "comfort": -3,
+            "respect": 0
+          },
+          "moodResponse": "Frustrated",
+          "nextSceneId": "ROME_HUB_04_DISTANCE"
+        }
+      ]
+    },
+
+    "ROME_HUB_03_ADVICE": {
+      "id": "ROME_HUB_03_ADVICE",
+      "hubNumber": 3,
+      "npcDialogue": "Of course I've talked to her. I've tried everything. Encouragement, drills, one-on-ones. Nothing's working.",
+      "npcAction": "She sounds tired now, less angry and more defeated.",
+      "npcSubtext": "She doesn't want advice, she wants support. But she's answered honestly.",
+      "choices": [
+        {
+          "id": "ROME_HUB_03_ADVICE_A",
+          "display": "\"I can tell you're trying. That must be exhausting.\"",
+          "intent": "Empathize",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 4,
+            "attraction": 1,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_HUB_04_DEEPENING"
+        },
+        {
+          "id": "ROME_HUB_03_ADVICE_B",
+          "display": "\"Sounds like you're doing everything you can. The rest is on her.\"",
+          "intent": "Validate",
+          "tone": "Practical",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 3,
+            "attraction": 0,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Validated",
+          "nextSceneId": "ROME_HUB_04_DEEPENING"
+        },
+        {
+          "id": "ROME_HUB_03_ADVICE_C",
+          "display": "\"Maybe the problem isn't the keeper. Maybe it's the system.\"",
+          "intent": "Challenge",
+          "tone": "Thoughtful",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": 0,
+            "attraction": 0,
+            "comfort": -1,
+            "respect": 2
+          },
+          "moodResponse": "Defensive",
+          "nextSceneId": "ROME_HUB_04_GUARDED"
+        }
+      ]
+    },
+
+    "ROME_HUB_04_DEEPENING": {
+      "id": "ROME_HUB_04_DEEPENING",
+      "hubNumber": 4,
+      "hubName": "The Team Dynamics",
+      "npcDialogue": "The thing is, I see so much potential in her. She could be amazing. But she's in her own head, second-guessing everything. And I don't know how to help her break through that.",
+      "npcAction": "Rome stretches her legs out, finally starting to relax.",
+      "npcSubtext": "She's opening up about leadership struggles. Trust is building.",
+      "choices": [
+        {
+          "id": "ROME_HUB_04_DEEPENING_A",
+          "display": "\"Sounds like you really care about your team. That's what makes a good captain.\"",
+          "intent": "Praise",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 2,
+            "comfort": 3,
+            "respect": 4
+          },
+          "moodResponse": "Appreciated",
+          "nextSceneId": "ROME_HUB_05_PERSONAL"
+        },
+        {
+          "id": "ROME_HUB_04_DEEPENING_B",
+          "display": "\"Maybe she just needs to know you believe in her. Not just when she performs.\"",
+          "intent": "Insight",
+          "tone": "Thoughtful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 4,
+            "attraction": 1,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Thoughtful",
+          "nextSceneId": "ROME_HUB_05_PERSONAL"
+        },
+        {
+          "id": "ROME_HUB_04_DEEPENING_C",
+          "display": "\"You push people because you see what they could be. I bet you're like that with yourself too.\"",
+          "intent": "Observe",
+          "tone": "Perceptive",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 4,
+            "attraction": 3,
+            "comfort": 2,
+            "respect": 4
+          },
+          "moodResponse": "Seen",
+          "nextSceneId": "ROME_HUB_05_VULNERABLE"
+        }
+      ]
+    },
+
+    "ROME_HUB_04_ROMANTIC": {
+      "id": "ROME_HUB_04_ROMANTIC",
+      "hubNumber": 4,
+      "npcDialogue": "Incredible? I don't know about that. I'm just... trying not to drown most days.",
+      "npcAction": "She looks down, a shy smile on her face. Her leg is still touching yours on the bench.",
+      "npcSubtext": "Romantic connection forming. She's being vulnerable AND attracted.",
+      "choices": [
+        {
+          "id": "ROME_HUB_04_ROMANTIC_A",
+          "display": "\"Everyone feels like that sometimes. Doesn't make you any less amazing.\"",
+          "intent": "Reassure",
+          "tone": "Tender",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 6,
+            "comfort": 5,
+            "respect": 3
+          },
+          "moodResponse": "Touched",
+          "nextSceneId": "ROME_HUB_05_MUTUAL_INTEREST"
+        },
+        {
+          "id": "ROME_HUB_04_ROMANTIC_B",
+          "display": "*brush hair from her face* \"You're doing better than you think.\"",
+          "intent": "Touch",
+          "tone": "Intimate",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 8,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Flustered",
+          "nextSceneId": "ROME_HUB_05_TENSION"
+        },
+        {
+          "id": "ROME_HUB_04_ROMANTIC_C",
+          "display": "\"Well, you've got me now. If you want someone in your corner.\"",
+          "intent": "Offer",
+          "tone": "Sincere",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 6,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Hopeful",
+          "nextSceneId": "ROME_HUB_05_MUTUAL_INTEREST"
+        }
+      ]
+    },
+
+    "ROME_HUB_04_FLIRTY": {
+      "id": "ROME_HUB_04_FLIRTY",
+      "hubNumber": 4,
+      "npcDialogue": "Good to know I made an impression. Though I'm usually covered in sweat and yelling at people when I'm on the field. Not exactly my best look.",
+      "npcAction": "She's smiling now, the earlier frustration mostly gone.",
+      "npcSubtext": "Playful banter. She's into this.",
+      "choices": [
+        {
+          "id": "ROME_HUB_04_FLIRTY_A",
+          "display": "\"I don't know, the sweaty and intense thing kind of works for you.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 2,
+            "attraction": 8,
+            "comfort": 3,
+            "respect": 2
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_HUB_05_CHEMISTRY"
+        },
+        {
+          "id": "ROME_HUB_04_FLIRTY_B",
+          "display": "\"I'd like to see you when you're not covered in sweat. Maybe dinner sometime?\"",
+          "intent": "Ask Out",
+          "tone": "Direct",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 7,
+            "comfort": 2,
+            "respect": 3
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_HUB_05_DATE_POSSIBILITY"
+        },
+        {
+          "id": "ROME_HUB_04_FLIRTY_C",
+          "display": "\"Competitive looks good on you. On and off the field.\"",
+          "intent": "Compliment",
+          "tone": "Playful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 2,
+            "attraction": 6,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_05_CHEMISTRY"
+        }
+      ]
+    },
+
+    "ROME_HUB_04_HOSTILE": {
+      "id": "ROME_HUB_04_HOSTILE",
+      "hubNumber": 4,
+      "npcDialogue": "You know what? I don't need relationship advice from someone I just met. Especially someone who clearly doesn't get it.",
+      "npcAction": "She grabs her bag again, seriously about to leave this time.",
+      "npcSubtext": "Critical moment. She's one choice away from walking permanently.",
+      "choices": [
+        {
+          "id": "ROME_HUB_04_HOSTILE_A",
+          "display": "\"Rome, wait. Please. I'm sorry. I crossed a line.\"",
+          "intent": "Apologize",
+          "tone": "Desperate",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 1,
+            "attraction": 0,
+            "comfort": 1,
+            "respect": 2
+          },
+          "moodResponse": "Hesitant",
+          "nextSceneId": "ROME_HUB_05_FRAGILE"
+        },
+        {
+          "id": "ROME_HUB_04_HOSTILE_B",
+          "display": "\"You're right. Go. I won't stop you.\"",
+          "intent": "Give Up",
+          "tone": "Cold",
+          "riskLevel": "Terminal",
+          "statDeltas": {
+            "affinity": -6,
+            "trust": -6,
+            "attraction": -4,
+            "comfort": -8,
+            "respect": -6
+          },
+          "moodResponse": "Hurt",
+          "nextSceneId": "ROME_END_HOSTILE_EXIT"
+        },
+        {
+          "id": "ROME_HUB_04_HOSTILE_C",
+          "display": "\"I'm not giving advice. I'm calling out what I see. And I see someone afraid.\"",
+          "intent": "Provoke",
+          "tone": "Challenging",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": -2,
+            "trust": -3,
+            "attraction": 3,
+            "comfort": -4,
+            "respect": 4
+          },
+          "moodResponse": "Angry",
+          "nextSceneId": "ROME_HUB_05_VOLATILE"
+        }
+      ]
+    },
+
+    "ROME_HUB_05_PERSONAL": {
+      "id": "ROME_HUB_05_PERSONAL",
+      "hubNumber": 5,
+      "hubName": "The Curiosity",
+      "npcDialogue": "Enough about me and my disaster of a day. What about you? What's your deal? Why are you even talking to me?",
+      "npcAction": "She turns toward you fully, genuinely curious now.",
+      "npcSubtext": "She's interested in you as a person. This shapes how she sees you going forward.",
+      "choices": [
+        {
+          "id": "ROME_HUB_05_PERSONAL_A",
+          "display": "\"Honestly? You looked like you needed someone to listen. And I wanted to.\"",
+          "intent": "Honest",
+          "tone": "Sincere",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 3,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Moved",
+          "nextSceneId": "ROME_HUB_06_CONNECTING"
+        },
+        {
+          "id": "ROME_HUB_05_PERSONAL_B",
+          "display": "\"Because you're interesting. And kind of beautiful when you're angry.\"",
+          "intent": "Flirt",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 2,
+            "attraction": 7,
+            "comfort": 2,
+            "respect": 2
+          },
+          "moodResponse": "Flustered",
+          "nextSceneId": "ROME_HUB_06_ATTRACTION"
+        },
+        {
+          "id": "ROME_HUB_05_PERSONAL_C",
+          "display": "\"I needed a break from my own stuff. Listening to your problems is easier than dealing with mine.\"",
+          "intent": "Deflect",
+          "tone": "Evasive",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 1,
+            "attraction": 1,
+            "comfort": 2,
+            "respect": 1
+          },
+          "moodResponse": "Curious",
+          "nextSceneId": "ROME_HUB_06_MUTUAL_VENTING"
+        }
+      ]
+    },
+
+    "ROME_HUB_05_MUTUAL_INTEREST": {
+      "id": "ROME_HUB_05_MUTUAL_INTEREST",
+      "hubNumber": 5,
+      "npcDialogue": "I... I'd like that. Having someone in my corner. I don't really have that outside the team.",
+      "npcAction": "She looks vulnerable but hopeful.",
+      "npcSubtext": "She's opening up emotionally AND romantically. Perfect setup for date ask.",
+      "choices": [
+        {
+          "id": "ROME_HUB_05_MUTUAL_INTEREST_A",
+          "display": "\"Well now you do. So, can I take you to dinner? Like, a real date?\"",
+          "intent": "Ask Out",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 4,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 4
+          },
+          "moodResponse": "Excited",
+          "nextSceneId": "ROME_HUB_06_DATE_ACCEPT"
+        },
+        {
+          "id": "ROME_HUB_05_MUTUAL_INTEREST_B",
+          "display": "\"Then let me be that person. No pressure, just... let's see where this goes.\"",
+          "intent": "Slow Approach",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Warm",
+          "nextSceneId": "ROME_HUB_06_SLOW_BUILD"
+        },
+        {
+          "id": "ROME_HUB_05_MUTUAL_INTEREST_C",
+          "display": "\"Everyone needs someone. I'm glad I can be that for you.\"",
+          "intent": "Support",
+          "tone": "Kind",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 6,
+            "attraction": 3,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Grateful",
+          "nextSceneId": "ROME_HUB_06_FRIENDSHIP_DEEP"
+        }
+      ]
+    },
+
+    "ROME_HUB_05_CHEMISTRY": {
+      "id": "ROME_HUB_05_CHEMISTRY",
+      "hubNumber": 5,
+      "npcDialogue": "You're trouble, aren't you?",
+      "npcAction": "She's grinning, eyes bright with interest.",
+      "npcSubtext": "High chemistry. She's very into you.",
+      "choices": [
+        {
+          "id": "ROME_HUB_05_CHEMISTRY_A",
+          "display": "\"Only the best kind. So what are you going to do about it?\"",
+          "intent": "Challenge",
+          "tone": "Playful",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 2,
+            "attraction": 9,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Intrigued",
+          "nextSceneId": "ROME_HUB_06_HIGH_TENSION"
+        },
+        {
+          "id": "ROME_HUB_05_CHEMISTRY_B",
+          "display": "\"Let me take you out and you can find out.\"",
+          "intent": "Ask Out",
+          "tone": "Smooth",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 8,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_HUB_06_DATE_FLIRTY"
+        },
+        {
+          "id": "ROME_HUB_05_CHEMISTRY_C",
+          "display": "\"Says the competitive athlete who pushes everyone around her. We might be a dangerous match.\"",
+          "intent": "Tease",
+          "tone": "Playful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 2,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_06_BANTER"
+        }
+      ]
+    },
+
+    "ROME_HUB_05_DATE_POSSIBILITY": {
+      "id": "ROME_HUB_05_DATE_POSSIBILITY",
+      "hubNumber": 5,
+      "npcDialogue": "Dinner? Like... a date?",
+      "npcAction": "She looks surprised but not displeased.",
+      "npcSubtext": "She wasn't expecting this but she's interested.",
+      "choices": [
+        {
+          "id": "ROME_HUB_05_DATE_POSSIBILITY_A",
+          "display": "\"Yeah, a date. Unless you're not interested, then it's just... dinner.\"",
+          "intent": "Give Out",
+          "tone": "Nervous",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 3,
+            "attraction": 6,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_06_DATE_YES"
+        },
+        {
+          "id": "ROME_HUB_05_DATE_POSSIBILITY_B",
+          "display": "\"Absolutely a date. I don't do subtle.\"",
+          "intent": "Confident",
+          "tone": "Direct",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 4
+          },
+          "moodResponse": "Impressed",
+          "nextSceneId": "ROME_HUB_06_DATE_YES"
+        },
+        {
+          "id": "ROME_HUB_05_DATE_POSSIBILITY_C",
+          "display": "\"If you want it to be a date. If not, just two people eating food.\"",
+          "intent": "Casual",
+          "tone": "Easy",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 2,
+            "attraction": 4,
+            "comfort": 4,
+            "respect": 2
+          },
+          "moodResponse": "Uncertain",
+          "nextSceneId": "ROME_HUB_06_AMBIGUOUS"
+        }
+      ]
+    },
+
+    "ROME_HUB_06_CONNECTING": {
+      "id": "ROME_HUB_06_CONNECTING",
+      "hubNumber": 6,
+      "hubName": "The Touch",
+      "npcDialogue": "That's... really nice. Most people just want to talk about themselves.",
+      "npcAction": "She shifts closer on the bench. Her shoulder brushes against yours.",
+      "npcSubtext": "Physical proximity increasing. Testing comfort with touch.",
+      "choices": [
+        {
+          "id": "ROME_HUB_06_CONNECTING_A",
+          "display": "*don't move away* \"I'm more interested in you.\"",
+          "intent": "Lean In",
+          "tone": "Soft",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 6,
+            "comfort": 5,
+            "respect": 3
+          },
+          "moodResponse": "Warm",
+          "nextSceneId": "ROME_HUB_07_CLOSENESS"
+        },
+        {
+          "id": "ROME_HUB_06_CONNECTING_B",
+          "display": "*put arm around her shoulders* \"You're easy to care about.\"",
+          "intent": "Physical",
+          "tone": "Bold",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 8,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Surprised",
+          "nextSceneId": "ROME_HUB_07_INTIMATE"
+        },
+        {
+          "id": "ROME_HUB_06_CONNECTING_C",
+          "display": "\"Everyone deserves someone who'll actually listen.\"",
+          "intent": "General",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 4,
+            "attraction": 2,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Grateful",
+          "nextSceneId": "ROME_HUB_07_FRIENDSHIP"
+        }
+      ]
+    },
+
+    "ROME_HUB_06_DATE_ACCEPT": {
+      "id": "ROME_HUB_06_DATE_ACCEPT",
+      "hubNumber": 6,
+      "npcDialogue": "Yeah. Yes. I'd really like that.",
+      "npcAction": "She's smiling widely now, the stress from practice completely gone.",
+      "npcSubtext": "She's excited. Date is happening. High romantic path locked in.",
+      "choices": [
+        {
+          "id": "ROME_HUB_06_DATE_ACCEPT_A",
+          "display": "\"Friday night? I'll pick you up at seven.\"",
+          "intent": "Plan",
+          "tone": "Confident",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 3,
+            "attraction": 6,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Excited",
+          "nextSceneId": "ROME_HUB_07_DATE_DETAILS"
+        },
+        {
+          "id": "ROME_HUB_06_DATE_ACCEPT_B",
+          "display": "\"Perfect. Give me your number and we'll figure out the details.\"",
+          "intent": "Exchange Info",
+          "tone": "Practical",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 5,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_HUB_07_NUMBER_EXCHANGE"
+        },
+        {
+          "id": "ROME_HUB_06_DATE_ACCEPT_C",
+          "display": "\"Actually, forget waiting. Want to grab food right now?\"",
+          "intent": "Immediate",
+          "tone": "Spontaneous",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 7,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Thrilled",
+          "nextSceneId": "ROME_HUB_07_IMMEDIATE_DATE"
+        }
+      ]
+    },
+
+    "ROME_HUB_06_HIGH_TENSION": {
+      "id": "ROME_HUB_06_HIGH_TENSION",
+      "hubNumber": 6,
+      "npcDialogue": "I think... I think I need to find out.",
+      "npcAction": "She leans in closer, eyes locked on yours.",
+      "npcSubtext": "Maximum sexual tension. Almost-kiss territory.",
+      "choices": [
+        {
+          "id": "ROME_HUB_06_HIGH_TENSION_A",
+          "display": "*close the distance* \"Then find out.\"",
+          "intent": "Kiss",
+          "tone": "Bold",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 3,
+            "attraction": 10,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Desire",
+          "nextSceneId": "ROME_HUB_07_KISS"
+        },
+        {
+          "id": "ROME_HUB_06_HIGH_TENSION_B",
+          "display": "*pull back slightly* \"Not yet. Take me to dinner first.\"",
+          "intent": "Tease",
+          "tone": "Playful",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 4,
+            "attraction": 8,
+            "comfort": 4,
+            "respect": 5
+          },
+          "moodResponse": "Intrigued",
+          "nextSceneId": "ROME_HUB_07_ANTICIPATION"
+        },
+        {
+          "id": "ROME_HUB_06_HIGH_TENSION_C",
+          "display": "*hold eye contact* \"I think you already know.\"",
+          "intent": "Sustain",
+          "tone": "Intense",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 3,
+            "attraction": 9,
+            "comfort": 3,
+            "respect": 4
+          },
+          "moodResponse": "Captivated",
+          "nextSceneId": "ROME_HUB_07_TENSION_HELD"
+        }
+      ]
+    },
+
+    "ROME_HUB_07_CLOSENESS": {
+      "id": "ROME_HUB_07_CLOSENESS",
+      "hubNumber": 7,
+      "hubName": "The Vulnerability",
+      "npcDialogue": "I don't let people get close very often. It's easier to keep everyone at arm's length. Less messy.",
+      "npcAction": "She's still close to you, not pulling away.",
+      "npcSubtext": "She's admitting fear of intimacy but choosing vulnerability anyway.",
+      "choices": [
+        {
+          "id": "ROME_HUB_07_CLOSENESS_A",
+          "display": "\"I get that. But some messes are worth it.\"",
+          "intent": "Encourage",
+          "tone": "Soft",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 6,
+            "attraction": 4,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Hopeful",
+          "nextSceneId": "ROME_HUB_08_DEEPENING_CONNECTION"
+        },
+        {
+          "id": "ROME_HUB_07_CLOSENESS_B",
+          "display": "*take her hand* \"Then let's be messy together.\"",
+          "intent": "Romantic",
+          "tone": "Bold",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 5,
+            "attraction": 7,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Moved",
+          "nextSceneId": "ROME_HUB_08_ROMANTIC_MOMENT"
+        },
+        {
+          "id": "ROME_HUB_07_CLOSENESS_C",
+          "display": "\"I'm not going anywhere. Take your time.\"",
+          "intent": "Patient",
+          "tone": "Reassuring",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 7,
+            "attraction": 3,
+            "comfort": 6,
+            "respect": 5
+          },
+          "moodResponse": "Safe",
+          "nextSceneId": "ROME_HUB_08_TRUST_BUILDING"
+        }
+      ]
+    },
+
+    "ROME_HUB_07_DATE_DETAILS": {
+      "id": "ROME_HUB_07_DATE_DETAILS",
+      "hubNumber": 7,
+      "npcDialogue": "Friday works. Where are we going?",
+      "npcAction": "She pulls out her phone, ready to save your number.",
+      "npcSubtext": "Practical planning. She's excited but grounded.",
+      "choices": [
+        {
+          "id": "ROME_HUB_07_DATE_DETAILS_A",
+          "display": "\"There's this Italian place downtown. Unless you have a preference?\"",
+          "intent": "Suggest",
+          "tone": "Considerate",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 4,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_HUB_08_DINNER_PLANS"
+        },
+        {
+          "id": "ROME_HUB_07_DATE_DETAILS_B",
+          "display": "\"It's a surprise. Trust me?\"",
+          "intent": "Mystery",
+          "tone": "Playful",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 6,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Intrigued",
+          "nextSceneId": "ROME_HUB_08_SURPRISE_PLANS"
+        },
+        {
+          "id": "ROME_HUB_07_DATE_DETAILS_C",
+          "display": "\"What kind of food do you like? I want to make sure it's something you'll enjoy.\"",
+          "intent": "Thoughtful",
+          "tone": "Caring",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 3,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Touched",
+          "nextSceneId": "ROME_HUB_08_COLLABORATIVE_PLANNING"
+        }
+      ]
+    },
+
+    "ROME_HUB_07_KISS": {
+      "id": "ROME_HUB_07_KISS",
+      "hubNumber": 7,
+      "npcDialogue": "*she kisses you, quick but intense, then pulls back* \"Okay. Wow. That was...\"",
+      "npcAction": "She's breathless, cheeks flushed, eyes wide.",
+      "npcSubtext": "First kiss happened. High risk, high reward. Chemistry confirmed.",
+      "choices": [
+        {
+          "id": "ROME_HUB_07_KISS_A",
+          "display": "\"Worth the wait?\"",
+          "intent": "Tease",
+          "tone": "Playful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 4,
+            "attraction": 9,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Giddy",
+          "nextSceneId": "ROME_HUB_08_POST_KISS_FLIRTY"
+        },
+        {
+          "id": "ROME_HUB_07_KISS_B",
+          "display": "\"Yeah. It really was.\"",
+          "intent": "Agree",
+          "tone": "Sincere",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 5,
+            "attraction": 10,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_HUB_08_POST_KISS_SWEET"
+        },
+        {
+          "id": "ROME_HUB_07_KISS_C",
+          "display": "*pull her back* \"Don't stop now.\"",
+          "intent": "Continue",
+          "tone": "Hungry",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 3,
+            "attraction": 11,
+            "comfort": 3,
+            "respect": 3
+          },
+          "moodResponse": "Desire",
+          "nextSceneId": "ROME_HUB_08_INTENSE_MAKEOUT"
+        }
+      ]
+    },
+
+    "ROME_HUB_08_DEEPENING_CONNECTION": {
+      "id": "ROME_HUB_08_DEEPENING_CONNECTION",
+      "hubNumber": 8,
+      "hubName": "The Invitation",
+      "npcDialogue": "You know what? Come to my game. This Saturday. I want you there.",
+      "npcAction": "She's looking at you with hope and vulnerability.",
+      "npcSubtext": "She wants you in her world. This is significant for her.",
+      "choices": [
+        {
+          "id": "ROME_HUB_08_DEEPENING_CONNECTION_A",
+          "display": "\"I'll be there. Front row if I can manage it.\"",
+          "intent": "Commit",
+          "tone": "Enthusiastic",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 6,
+            "attraction": 4,
+            "comfort": 5,
+            "respect": 5
+          },
+          "moodResponse": "Excited",
+          "nextSceneId": "ROME_HUB_09_GAME_CONFIRMED"
+        },
+        {
+          "id": "ROME_HUB_08_DEEPENING_CONNECTION_B",
+          "display": "\"I wouldn't miss it. You're my good luck charm, remember?\"",
+          "intent": "Playful Commit",
+          "tone": "Sweet",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Warm",
+          "nextSceneId": "ROME_HUB_09_GAME_CONFIRMED"
+        },
+        {
+          "id": "ROME_HUB_08_DEEPENING_CONNECTION_C",
+          "display": "\"I'll try my best, but I might have something that day.\"",
+          "intent": "Hesitant",
+          "tone": "Uncertain",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": -2,
+            "attraction": 1,
+            "comfort": -2,
+            "respect": 0
+          },
+          "moodResponse": "Disappointed",
+          "nextSceneId": "ROME_HUB_09_GAME_UNCERTAIN"
+        }
+      ]
+    },
+
+    "ROME_HUB_08_DINNER_PLANS": {
+      "id": "ROME_HUB_08_DINNER_PLANS",
+      "hubNumber": 8,
+      "npcDialogue": "Italian sounds perfect. I love pasta. And wine.",
+      "npcAction": "She saves your number with a smile.",
+      "npcSubtext": "Easy agreement. She's comfortable and happy.",
+      "choices": [
+        {
+          "id": "ROME_HUB_08_DINNER_PLANS_A",
+          "display": "\"Then we'll get both. Lots of both.\"",
+          "intent": "Agree",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 3,
+            "attraction": 4,
+            "comfort": 4,
+            "respect": 3
+          },
+          "moodResponse": "Content",
+          "nextSceneId": "ROME_HUB_09_ANTICIPATION"
+        },
+        {
+          "id": "ROME_HUB_08_DINNER_PLANS_B",
+          "display": "\"Good. I was hoping you'd say that. I know the perfect place.\"",
+          "intent": "Confident",
+          "tone": "Assured",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 3,
+            "attraction": 5,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_HUB_09_ANTICIPATION"
+        },
+        {
+          "id": "ROME_HUB_08_DINNER_PLANS_C",
+          "display": "\"Should I pick you up from your place or meet you there?\"",
+          "intent": "Practical",
+          "tone": "Thoughtful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 4,
+            "attraction": 3,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Appreciative",
+          "nextSceneId": "ROME_HUB_09_LOGISTICS"
+        }
+      ]
+    },
+
+    "ROME_HUB_08_POST_KISS_SWEET": {
+      "id": "ROME_HUB_08_POST_KISS_SWEET",
+      "hubNumber": 8,
+      "npcDialogue": "I've been wanting to do that since you told me I looked hot when I'm angry.",
+      "npcAction": "She's smiling, still close to you, hand finding yours.",
+      "npcSubtext": "Post-kiss sweetness. Romantic connection solidified.",
+      "choices": [
+        {
+          "id": "ROME_HUB_08_POST_KISS_SWEET_A",
+          "display": "\"I've been wanting you to since then too.\"",
+          "intent": "Reciprocate",
+          "tone": "Tender",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 5,
+            "attraction": 9,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Smitten",
+          "nextSceneId": "ROME_HUB_09_RELATIONSHIP_TALK"
+        },
+        {
+          "id": "ROME_HUB_08_POST_KISS_SWEET_B",
+          "display": "\"So... what now? Are we doing this?\"",
+          "intent": "Define",
+          "tone": "Direct",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 7,
+            "comfort": 4,
+            "respect": 5
+          },
+          "moodResponse": "Serious",
+          "nextSceneId": "ROME_HUB_09_DTR"
+        },
+        {
+          "id": "ROME_HUB_08_POST_KISS_SWEET_C",
+          "display": "*kiss her forehead* \"Come on. Let me walk you home.\"",
+          "intent": "Gentle",
+          "tone": "Protective",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 6,
+            "attraction": 7,
+            "comfort": 6,
+            "respect": 5
+          },
+          "moodResponse": "Safe",
+          "nextSceneId": "ROME_HUB_09_WALKING_HOME"
+        }
+      ]
+    },
+
+    "ROME_HUB_09_GAME_CONFIRMED": {
+      "id": "ROME_HUB_09_GAME_CONFIRMED",
+      "hubNumber": 9,
+      "hubName": "The Almost-Moment",
+      "npcDialogue": "I play better when you're watching. I can already tell.",
+      "npcAction": "She leans against you comfortably now.",
+      "npcSubtext": "She's claimed you as hers in her mind. Possessive seed planted (healthy version).",
+      "choices": [
+        {
+          "id": "ROME_HUB_09_GAME_CONFIRMED_A",
+          "display": "\"Then I'll be at every game I can make.\"",
+          "intent": "Commit",
+          "tone": "Devoted",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 6,
+            "attraction": 5,
+            "comfort": 6,
+            "respect": 5
+          },
+          "moodResponse": "Adored",
+          "nextSceneId": "ROME_HUB_10_COMMITMENT"
+        },
+        {
+          "id": "ROME_HUB_09_GAME_CONFIRMED_B",
+          "display": "\"No pressure then, right?\"",
+          "intent": "Tease",
+          "tone": "Playful",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Amused",
+          "nextSceneId": "ROME_HUB_10_COMMITMENT"
+        },
+        {
+          "id": "ROME_HUB_09_GAME_CONFIRMED_C",
+          "display": "\"I'm excited to see you in your element.\"",
+          "intent": "Genuine",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 4,
+            "comfort": 5,
+            "respect": 5
+          },
+          "moodResponse": "Appreciated",
+          "nextSceneId": "ROME_HUB_10_COMMITMENT"
+        }
+      ]
+    },
+
+    "ROME_HUB_09_ANTICIPATION": {
+      "id": "ROME_HUB_09_ANTICIPATION",
+      "hubNumber": 9,
+      "npcDialogue": "I'm actually kind of nervous now. About Friday.",
+      "npcAction": "She admits this shyly, looking down.",
+      "npcSubtext": "Vulnerable admission. She really cares about this going well.",
+      "choices": [
+        {
+          "id": "ROME_HUB_09_ANTICIPATION_A",
+          "display": "\"Me too. But the good kind of nervous.\"",
+          "intent": "Relate",
+          "tone": "Honest",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 4
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_HUB_10_MUTUAL_FEELINGS"
+        },
+        {
+          "id": "ROME_HUB_09_ANTICIPATION_B",
+          "display": "\"Don't be. It's just us. No pressure.\"",
+          "intent": "Reassure",
+          "tone": "Gentle",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 5,
+            "attraction": 4,
+            "comfort": 6,
+            "respect": 4
+          },
+          "moodResponse": "Calmer",
+          "nextSceneId": "ROME_HUB_10_MUTUAL_FEELINGS"
+        },
+        {
+          "id": "ROME_HUB_09_ANTICIPATION_C",
+          "display": "\"Good. That means you care. So do I.\"",
+          "intent": "Validate",
+          "tone": "Direct",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 6,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 5
+          },
+          "moodResponse": "Understood",
+          "nextSceneId": "ROME_HUB_10_MUTUAL_FEELINGS"
+        }
+      ]
+    },
+
+    "ROME_HUB_09_RELATIONSHIP_TALK": {
+      "id": "ROME_HUB_09_RELATIONSHIP_TALK",
+      "hubNumber": 9,
+      "npcDialogue": "I don't do casual well. If we're doing this, I need to know it's real.",
+      "npcAction": "She's serious now, holding your gaze.",
+      "npcSubtext": "She needs clarity. Can't handle ambiguity. This is important.",
+      "choices": [
+        {
+          "id": "ROME_HUB_09_RELATIONSHIP_TALK_A",
+          "display": "\"It's real for me. I want to see where this goes.\"",
+          "intent": "Commit",
+          "tone": "Sincere",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 7,
+            "trust": 7,
+            "attraction": 7,
+            "comfort": 6,
+            "respect": 6
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_HUB_10_EXCLUSIVE"
+        },
+        {
+          "id": "ROME_HUB_09_RELATIONSHIP_TALK_B",
+          "display": "\"I don't do casual either. Let's be real together.\"",
+          "intent": "Match Energy",
+          "tone": "Direct",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 8,
+            "trust": 8,
+            "attraction": 8,
+            "comfort": 6,
+            "respect": 7
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_HUB_10_EXCLUSIVE"
+        },
+        {
+          "id": "ROME_HUB_09_RELATIONSHIP_TALK_C",
+          "display": "\"Can we see how it goes? I'm interested, but I need time.\"",
+          "intent": "Hesitate",
+          "tone": "Cautious",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": 2,
+            "trust": 1,
+            "attraction": 4,
+            "comfort": 1,
+            "respect": 2
+          },
+          "moodResponse": "Hurt",
+          "nextSceneId": "ROME_HUB_10_REJECTION"
+        }
+      ]
+    },
+
+    "ROME_HUB_10_COMMITMENT": {
+      "id": "ROME_HUB_10_COMMITMENT",
+      "hubNumber": 10,
+      "hubName": "The Defining Moment",
+      "npcDialogue": "So... what is this? What are we?",
+      "npcAction": "She needs to know. Can't leave it undefined.",
+      "npcSubtext": "Final hub. This determines ending type.",
+      "choices": [
+        {
+          "id": "ROME_HUB_10_COMMITMENT_A",
+          "display": "\"We're together. If that's what you want too.\"",
+          "intent": "Relationship",
+          "tone": "Clear",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 8,
+            "trust": 8,
+            "attraction": 7,
+            "comfort": 7,
+            "respect": 7
+          },
+          "moodResponse": "Overjoyed",
+          "nextSceneId": "ROME_END_ROMANTIC_COMMITTED"
+        },
+        {
+          "id": "ROME_HUB_10_COMMITMENT_B",
+          "display": "\"We're figuring it out. And I'm happy with that.\"",
+          "intent": "Open",
+          "tone": "Honest",
+          "riskLevel": "Moderate",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 6,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 5
+          },
+          "moodResponse": "Accepting",
+          "nextSceneId": "ROME_END_SLOW_BURN"
+        },
+        {
+          "id": "ROME_HUB_10_COMMITMENT_C",
+          "display": "\"We're friends. Really good friends.\"",
+          "intent": "Friend Zone",
+          "tone": "Gentle",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 3,
+            "trust": 5,
+            "attraction": 1,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Disappointed",
+          "nextSceneId": "ROME_END_FRIENDSHIP"
+        }
+      ]
+    },
+
+    "ROME_HUB_10_MUTUAL_FEELINGS": {
+      "id": "ROME_HUB_10_MUTUAL_FEELINGS",
+      "hubNumber": 10,
+      "npcDialogue": "I should probably head home and shower before I completely gross you out. But... I'm really glad we talked.",
+      "npcAction": "She stands but doesn't seem eager to leave.",
+      "npcSubtext": "She wants you to make a move or make plans to continue this.",
+      "choices": [
+        {
+          "id": "ROME_HUB_10_MUTUAL_FEELINGS_A",
+          "display": "\"Can I see you before Friday? Coffee tomorrow?\"",
+          "intent": "Soon",
+          "tone": "Eager",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 6,
+            "trust": 6,
+            "attraction": 6,
+            "comfort": 6,
+            "respect": 5
+          },
+          "moodResponse": "Delighted",
+          "nextSceneId": "ROME_END_ROMANTIC_EAGER"
+        },
+        {
+          "id": "ROME_HUB_10_MUTUAL_FEELINGS_B",
+          "display": "\"Me too. I'll text you tonight?\"",
+          "intent": "Standard",
+          "tone": "Warm",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 5,
+            "trust": 5,
+            "attraction": 5,
+            "comfort": 5,
+            "respect": 5
+          },
+          "moodResponse": "Happy",
+          "nextSceneId": "ROME_END_ROMANTIC_STANDARD"
+        },
+        {
+          "id": "ROME_HUB_10_MUTUAL_FEELINGS_C",
+          "display": "\"Yeah, me too. See you Friday.\"",
+          "intent": "Wait",
+          "tone": "Casual",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 4,
+            "trust": 4,
+            "attraction": 4,
+            "comfort": 4,
+            "respect": 4
+          },
+          "moodResponse": "Content",
+          "nextSceneId": "ROME_END_DATE_SET"
+        }
+      ]
+    },
+
+    "ROME_HUB_10_EXCLUSIVE": {
+      "id": "ROME_HUB_10_EXCLUSIVE",
+      "hubNumber": 10,
+      "npcDialogue": "Okay. Good. Because I don't share well.",
+      "npcAction": "She kisses you again, claiming you.",
+      "npcSubtext": "She's yours, you're hers. Possessive but in a sweet way (for now).",
+      "choices": [
+        {
+          "id": "ROME_HUB_10_EXCLUSIVE_A",
+          "display": "\"Neither do I. You're mine now.\"",
+          "intent": "Mutual Claim",
+          "tone": "Possessive",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 8,
+            "trust": 7,
+            "attraction": 10,
+            "comfort": 6,
+            "respect": 6
+          },
+          "moodResponse": "Satisfied",
+          "nextSceneId": "ROME_END_EXCLUSIVE_INTENSE"
+        },
+        {
+          "id": "ROME_HUB_10_EXCLUSIVE_B",
+          "display": "\"Good thing I'm only interested in you then.\"",
+          "intent": "Reassure",
+          "tone": "Sweet",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 7,
+            "trust": 8,
+            "attraction": 8,
+            "comfort": 7,
+            "respect": 7
+          },
+          "moodResponse": "Relieved",
+          "nextSceneId": "ROME_END_EXCLUSIVE_SWEET"
+        },
+        {
+          "id": "ROME_HUB_10_EXCLUSIVE_C",
+          "display": "\"I'm all yours.\"",
+          "intent": "Submit",
+          "tone": "Soft",
+          "riskLevel": "Low",
+          "statDeltas": {
+            "affinity": 7,
+            "trust": 7,
+            "attraction": 9,
+            "comfort": 6,
+            "respect": 5
+          },
+          "moodResponse": "Pleased",
+          "nextSceneId": "ROME_END_EXCLUSIVE_SWEET"
+        }
+      ]
+    },
+
+    "ROME_HUB_10_REJECTION": {
+      "id": "ROME_HUB_10_REJECTION",
+      "hubNumber": 10,
+      "npcDialogue": "Oh. I... okay. I get it.",
+      "npcAction": "She pulls back physically and emotionally.",
+      "npcSubtext": "She's hurt. She put herself out there and you rejected her.",
+      "choices": [
+        {
+          "id": "ROME_HUB_10_REJECTION_A",
+          "display": "\"Rome, I'm sorry. I do like you, I just—\"",
+          "intent": "Explain",
+          "tone": "Apologetic",
+          "riskLevel": "High",
+          "statDeltas": {
+            "affinity": 1,
+            "trust": 0,
+            "attraction": 2,
+            "comfort": 0,
+            "respect": 1
+          },
+          "moodResponse": "Hurt",
+          "nextSceneId": "ROME_END_REJECTED_SALVAGE"
+        },
+        {
+          "id": "ROME_HUB_10_REJECTION_B",
+          "display": "\"Let's just be friends. That's still good, right?\"",
+          "intent": "Friend Zone",
+          "tone": "Hopeful",
+          "riskLevel": "Very High",
+          "statDeltas": {
+            "affinity": 0,
+            "trust": -2,
+            "attraction": 0,
+            "comfort": -2,
+            "respect": 0
+          },
+          "moodResponse": "Hurt",
+          "nextSceneId": "ROME_END_FRIEND_ZONED"
+        },
+        {
+          "id": "ROME_HUB_10_REJECTION_C",
+          "display": "*say nothing*",
+          "intent": "Silence",
+          "tone": "Awkward",
+          "riskLevel": "Terminal",
+          "statDeltas": {
+            "affinity": -3,
+            "trust": -4,
+            "attraction": -2,
+            "comfort": -5,
+            "respect": -3
+          },
+          "moodResponse": "Devastated",
+          "nextSceneId": "ROME_END_TENSION"
+        }
+      ]
+    },
+
+    "ROME_END_ROMANTIC_COMMITTED": {
+      "id": "ROME_END_ROMANTIC_COMMITTED",
+      "npcDialogue": "Yeah. That's exactly what I want. You and me.",
+      "npcAction": "She kisses you deeply, then rests her forehead against yours.",
+      "npcSubtext": "ENDING: Romantic Success - Committed relationship",
+      "finalStats": "Affinity: 45-60, Trust: 40-55, Attraction: 45-60, Comfort: 40-50, Respect: 40-50",
+      "nextChapter": "Chapter 2 - The Date (Romantic Route)",
+      "choices": []
+    },
+
+    "ROME_END_SLOW_BURN": {
+      "id": "ROME_END_SLOW_BURN",
+      "npcDialogue": "Okay. We'll figure it out together then.",
+      "npcAction": "She smiles, less certain but still hopeful.",
+      "npcSubtext": "ENDING: Slow Burn - Romantic interest, undefined",
+      "finalStats": "Affinity: 30-40, Trust: 35-45, Attraction: 30-40, Comfort: 30-40, Respect: 30-40",
+      "nextChapter": "Chapter 2 - The Hangout (Slow Burn Route)",
+      "choices": []
+    },
+
+    "ROME_END_FRIENDSHIP": {
+      "id": "ROME_END_FRIENDSHIP",
+      "npcDialogue": "Friends. Right. Yeah, of course.",
+      "npcAction": "She forces a smile, trying to hide disappointment.",
+      "npcSubtext": "ENDING: Friend Zone - She wanted more but accepts",
+      "finalStats": "Affinity: 20-30, Trust: 30-40, Attraction: 5-15, Comfort: 25-35, Respect: 25-35",
+      "nextChapter": "Chapter 2 - The Friendship (Can shift romantic or stay platonic)",
+      "choices": []
+    },
+
+    "ROME_END_ROMANTIC_EAGER": {
+      "id": "ROME_END_ROMANTIC_EAGER",
+      "npcDialogue": "Tomorrow? Yes! I mean... yeah, that sounds great.",
+      "npcAction": "She can't stop smiling.",
+      "npcSubtext": "ENDING: Romantic - High enthusiasm, fast connection",
+      "finalStats": "Affinity: 40-50, Trust: 35-45, Attraction: 40-50, Comfort: 35-45, Respect: 30-40",
+      "nextChapter": "Chapter 2 - Coffee Date (Accelerated Romantic Route)",
+      "choices": []
+    },
+
+    "ROME_END_ROMANTIC_STANDARD": {
+      "id": "ROME_END_ROMANTIC_STANDARD",
+      "npcDialogue": "I'd like that. Text me.",
+      "npcAction": "She waves as she heads off.",
+      "npcSubtext": "ENDING: Romantic - Standard pace, healthy",
+      "finalStats": "Affinity: 35-45, Trust: 30-40, Attraction: 35-45, Comfort: 30-40, Respect: 30-40",
+      "nextChapter": "Chapter 2 - The Date (Standard Romantic Route)",
+      "choices": []
+    },
+
+    "ROME_END_DATE_SET": {
+      "id": "ROME_END_DATE_SET",
+      "npcDialogue": "See you Friday. I'm already counting down.",
+      "npcAction": "She jogs off, looking back once with a smile.",
+      "npcSubtext": "ENDING: Date Anticipation - Waiting for Friday",
+      "finalStats": "Affinity: 30-40, Trust: 25-35, Attraction: 30-40, Comfort: 25-35, Respect: 25-35",
+      "nextChapter": "Chapter 2 - The First Date",
+      "choices": []
+    },
+
+    "ROME_END_EXCLUSIVE_INTENSE": {
+      "id": "ROME_END_EXCLUSIVE_INTENSE",
+      "npcDialogue": "All mine. I like the sound of that.",
+      "npcAction": "She pulls you close possessively.",
+      "npcSubtext": "ENDING: Exclusive Intense - High passion, possessive undertones",
+      "finalStats": "Affinity: 50-60, Trust: 40-50, Attraction: 55-65, Comfort: 35-45, Respect: 35-45",
+      "nextChapter": "Chapter 2 - Exclusive Dating (Watch for possessive behavior)",
+      "choices": []
+    },
+
+    "ROME_END_EXCLUSIVE_SWEET": {
+      "id": "ROME_END_EXCLUSIVE_SWEET",
+      "npcDialogue": "Good. Because you're stuck with me now.",
+      "npcAction": "She hugs you tight.",
+      "npcSubtext": "ENDING: Exclusive Sweet - Healthy exclusive relationship",
+      "finalStats": "Affinity: 45-55, Trust: 45-55, Attraction: 45-55, Comfort: 40-50, Respect: 40-50",
+      "nextChapter": "Chapter 2 - Dating (Healthy Route)",
+      "choices": []
+    },
+
+    "ROME_END_REJECTED_SALVAGE": {
+      "id": "ROME_END_REJECTED_SALVAGE",
+      "npcDialogue": "It's fine. Really. I should go.",
+      "npcAction": "She's clearly hurt but trying to be mature.",
+      "npcSubtext": "ENDING: Rejected But Salvageable - Hurt but not hostile",
+      "finalStats": "Affinity: 10-20, Trust: 10-20, Attraction: 10-20, Comfort: 5-15, Respect: 10-20",
+      "nextChapter": "Chapter 2 - The Repair Attempt",
+      "choices": []
+    },
+
+    "ROME_END_FRIEND_ZONED": {
+      "id": "ROME_END_FRIEND_ZONED",
+      "npcDialogue": "Yeah. Friends. Sure.",
+      "npcAction": "She walks away without looking back.",
+      "npcSubtext": "ENDING: Friend Zone Rejection - She's very hurt",
+      "finalStats": "Affinity: 5-15, Trust: 5-15, Attraction: 5-10, Comfort: 5-10, Respect: 5-15",
+      "nextChapter": "Chapter 2 - Awkward Encounters (Possible dark route seed)",
+      "choices": []
+    },
+
+    "ROME_END_TENSION": {
+      "id": "ROME_END_TENSION",
+      "npcDialogue": "I need to go.",
+      "npcAction": "She leaves abruptly, clearly upset.",
+      "npcSubtext": "ENDING: Tense - High tension, possible dark route",
+      "finalStats": "Affinity: 0-10, Trust: 0-10, Attraction: 5-15, Comfort: 0-5, Respect: 0-10",
+      "nextChapter": "Chapter 2 - The Spiral (Dark route warning)",
+      "choices": []
+    },
+
+    "ROME_END_BLOWN_OFF": {
+      "id": "ROME_END_BLOWN_OFF",
+      "npcDialogue": "*she just walks away without another word*",
+      "npcAction": "She's done. Completely.",
+      "npcSubtext": "ENDING: Blown Off - Relationship destroyed",
+      "finalStats": "Affinity: -20 to -10, Trust: -20 to -10, Attraction: -10 to 0, Comfort: -25 to -15, Respect: -20 to -10",
+      "nextChapter": "Chapter 2 - Complete Stranger OR Dark Route Activated",
+      "choices": []
+    },
+
+    "ROME_END_HOSTILE_EXIT": {
+      "id": "ROME_END_HOSTILE_EXIT",
+      "npcDialogue": "*she leaves without a word, jaw clenched*",
+      "npcAction": "She's furious and hurt.",
+      "npcSubtext": "ENDING: Hostile Exit - Enemy created",
+      "finalStats": "Affinity: -30 to -20, Trust: -30 to -20, Attraction: -15 to -5, Comfort: -35 to -25, Respect: -30 to -20",
+      "nextChapter": "Chapter 2 - Dark Route Begins (Obsession/revenge)",
+      "choices": []
+    }
+  }
+}
