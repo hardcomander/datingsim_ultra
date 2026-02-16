@@ -2,6 +2,25 @@ import { useEffect, useMemo, useState, useRef } from 'react'
 import { convertSceneToLegacy, loadScene } from '../dialogueEngine.js'
 import { playSound } from '../utils/soundEffects.js'
 
+function hashSeed(value = '') {
+  return Array.from(value).reduce((sum, char) => sum + char.charCodeAt(0), 0)
+}
+
+function shuffleChoicesDeterministic(choices = [], seedValue = '') {
+  const shuffled = [...choices]
+  let seed = hashSeed(seedValue)
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    seed = (seed * 1664525 + 1013904223) >>> 0
+    const swapIndex = seed % (index + 1)
+    const tmp = shuffled[index]
+    shuffled[index] = shuffled[swapIndex]
+    shuffled[swapIndex] = tmp
+  }
+
+  return shuffled
+}
+
 export default function IntentDialogueScene({ sceneId, onComplete, onStatChange, onChoice, onTurnChange }) {
   const [choiceHistory, setChoiceHistory] = useState([])
   const [displayedText, setDisplayedText] = useState('')
@@ -20,6 +39,11 @@ export default function IntentDialogueScene({ sceneId, onComplete, onStatChange,
     () => convertSceneToLegacy(sceneData, choiceHistory),
     [sceneData, choiceHistory]
   )
+
+  const displayChoices = useMemo(() => {
+    const seed = `${sceneId}|${currentState.turn}|${choiceHistory.join('|')}`
+    return shuffleChoicesDeterministic(currentState.choices, seed)
+  }, [currentState.choices, currentState.turn, choiceHistory, sceneId])
 
   useEffect(() => {
     if (onTurnChange) {
@@ -148,7 +172,7 @@ export default function IntentDialogueScene({ sceneId, onComplete, onStatChange,
 
       {/* Player Choices */}
       <div className="space-y-2">
-        {currentState.choices.map((choice) => (
+        {displayChoices.map((choice) => (
           <div key={choice.id} className="space-y-1">
             <button
               type="button"

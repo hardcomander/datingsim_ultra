@@ -689,8 +689,6 @@ export default function App() {
                     onComplete={(choiceHistory, finalStats) => {
                       console.log('Scene complete:', choiceHistory, finalStats)
                       setSceneComplete(true)
-                      // Show chapter select after a brief moment
-                      setTimeout(() => setShowChapterSelect(true), 500)
                     }}
                   />
                   {sceneComplete && !showChapterSelect && (
@@ -698,6 +696,15 @@ export default function App() {
                       <div className="rounded-lg border border-indigo-500/50 bg-indigo-950/30 p-4">
                         <p className="text-lg font-semibold text-indigo-200">Scene Complete!</p>
                         <p className="text-sm text-slate-300 mt-2">A moment of connection... but there are other stories waiting.</p>
+                        <div className="mt-4">
+                          <button
+                            type="button"
+                            onClick={() => setShowChapterSelect(true)}
+                            className="rounded-full border border-indigo-400/70 bg-indigo-950/50 px-4 py-2 text-xs uppercase tracking-[0.2em] text-indigo-100 hover:border-indigo-300 hover:text-white"
+                          >
+                            Continue to Chapter Selection
+                          </button>
+                        </div>
                       </div>
                     </div>
                   )}

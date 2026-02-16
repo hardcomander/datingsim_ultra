@@ -4,7 +4,7 @@
 
 import parkArtistScene from './scenes/parkArtist.js'
 import { twoCharacterTestScene } from './scenes/twoCharacterTest.js'
-import romeChapter1Scene from './scenes/rome_chapter1.json'
+import romeChapter1Scene from './scenes/rome_chapter1b.json'
 
 export const intents = {
   COMPLIMENT: 'compliment',
@@ -182,7 +182,8 @@ function convertGraphSceneToLegacy(sceneData, choiceHistory = []) {
     const chosenChoice = (node.choices || []).find((choice) => choice.id === choiceId)
     if (!chosenChoice) return
 
-    Object.entries(chosenChoice.statDeltas || {}).forEach(([stat, delta]) => {
+    const balancedChosenDeltas = rebalanceStatDeltas(chosenChoice.id, chosenChoice.statDeltas || {})
+    Object.entries(balancedChosenDeltas).forEach(([stat, delta]) => {
       currentStats[stat] = (currentStats[stat] ?? 0) + delta
     })
 
@@ -196,16 +197,20 @@ function convertGraphSceneToLegacy(sceneData, choiceHistory = []) {
   })
 
   const currentNode = currentNodeId ? nodes[currentNodeId] : null
-  let currentChoices = (currentNode?.choices || []).map((choice) => ({
+  let currentChoices = (currentNode?.choices || []).map((choice) => {
+    const balancedDeltas = rebalanceStatDeltas(choice.id, choice.statDeltas || {})
+
+    return {
     id: choice.id,
     label: choice.display,
     intent: choice.intent,
     tone: choice.tone,
     riskLevel: choice.riskLevel,
-    statDelta: choice.statDeltas,
+    statDelta: balancedDeltas,
     nextSceneId: choice.nextSceneId,
     moodResponse: choice.moodResponse,
-  }))
+    }
+  })
 
   const isRomeScene = sceneData?.id === 'romeChapter1' || npc?.id === 'rome'
   if (isRomeScene && currentNodeId) {
@@ -228,6 +233,40 @@ function convertGraphSceneToLegacy(sceneData, choiceHistory = []) {
     choices: currentChoices,
     isComplete: reachedMissingNode || !currentNode || currentChoices.length === 0,
   }
+}
+
+const CORE_RELATIONSHIP_STATS = ['affinity', 'trust', 'attraction', 'comfort', 'respect']
+
+function hashChoiceId(choiceId = '') {
+  return Array.from(choiceId).reduce((sum, char) => sum + char.charCodeAt(0), 0)
+}
+
+function rebalanceStatDeltas(choiceId, statDeltas = {}) {
+  const normalized = { ...statDeltas }
+  const positiveCoreStats = CORE_RELATIONSHIP_STATS.filter((stat) => (normalized[stat] ?? 0) > 0)
+
+  if (positiveCoreStats.length <= 3) {
+    return normalized
+  }
+
+  const isAllCoreStatsPositive = positiveCoreStats.length === CORE_RELATIONSHIP_STATS.length
+  const allowAllPositiveRarely = isAllCoreStatsPositive && (hashChoiceId(choiceId) % 25 === 0)
+  if (allowAllPositiveRarely) {
+    return normalized
+  }
+
+  const sortedBySmallestGain = [...positiveCoreStats].sort(
+    (a, b) => (normalized[a] ?? 0) - (normalized[b] ?? 0)
+  )
+
+  const maxPositiveCoreStats = 3
+  const statsToFlatten = sortedBySmallestGain.slice(0, Math.max(0, positiveCoreStats.length - maxPositiveCoreStats))
+
+  statsToFlatten.forEach((stat) => {
+    normalized[stat] = 0
+  })
+
+  return normalized
 }
 
 /**
